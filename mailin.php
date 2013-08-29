@@ -14,6 +14,9 @@ class Mailin
 		{
 			throw new Exception('Mailin requires CURL module');
 		}
+		$this->base_url = $base_url;
+		$this->access_key = $access_key;
+		$this->secret_key = $secret_key;
 	}
 	/**
 	 * Do CURL request with authorization
@@ -39,6 +42,10 @@ class Mailin
 		curl_setopt($ch, CURLOPT_HEADER, 0);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $input);
 		$data = curl_exec($ch);
+		if(curl_errno($ch))
+		{
+    			echo "Curl error: ".curl_error($ch)."\n";
+		}
 		curl_close($ch);
 		return json_decode($data,true);
 	}
