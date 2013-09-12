@@ -44,7 +44,7 @@ class Mailin
 		$data = curl_exec($ch);
 		if(curl_errno($ch))
 		{
-    			echo "Curl error: ".curl_error($ch)."\n";
+    		echo 'Curl error: ' . curl_error($ch). '\n';
 		}
 		curl_close($ch);
 		return json_decode($data,true);
@@ -69,9 +69,9 @@ class Mailin
         {
                 return $this->get("account","");
         }
-        public function send_sms($to,$text,$web_url,$tag,$from)
+        public function send_sms($text,$tag,$web_url,$sms_from,$sms_to)
         {
-                return $this->post("sms",json_encode(array("to"=>$to,"text"=>$text,"web_url"=>$web_url,"tag"=>$tag,"from"=>$from)));
+                return $this->post("sms",json_encode(array("text"=>$text,"tag"=>$tag,"web_url"=>$web_url,"sms_from"=>$sms_from,"sms_to"=>$sms_to)));
         }
         public function get_campaigns()
         {
@@ -145,6 +145,10 @@ class Mailin
         {
                 return $this->delete("list/".$id."/users",json_encode(array("users"=>$users)));
         }
+        public function send_email($cc,$text,$bcc,$replyto,$html,$email_to,$attachment,$email_from,$subject)
+        {
+                return $this->post("email",json_encode(array("cc"=>$cc,"text"=>$text,"bcc"=>$bcc,"replyto"=>$replyto,"html"=>$html,"email_to"=>$email_to,"attachment"=>$attachment,"email_from"=>$email_from,"subject"=>$subject)));
+        }
         public function get_webhooks()
         {
                 return $this->get("webhook","");
@@ -172,6 +176,10 @@ class Mailin
         public function get_user($id)
         {
                 return $this->get("user/".$id,"");
+        }
+        public function get_user_stats($id,$type)
+        {
+                return $this->get("user/".$id."/".$type,"");
         }
         public function create_user($attributes,$blacklisted,$email,$listid)
         {
@@ -232,6 +240,10 @@ class Mailin
         public function update_folder($id,$name)
         {
                 return $this->put("folder/".$id,json_encode(array("name"=>$name)));
+        }
+        public function delete_bounces($start_date,$end_date,$email)
+        {
+                return $this->post("bounces",json_encode(array("start_date"=>$start_date,"end_date"=>$end_date,"email"=>$email)));
         }
 
 }
