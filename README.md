@@ -47,5 +47,4 @@ $mailin->send_email({"to@email.com":"name1"},{},{},[],{"replyto@email.com":"Repl
 
 ?>
 ```
-
 3. To explore more, you should visit the [Mailin API documentation](https://apidocs.mailinblue.com).
