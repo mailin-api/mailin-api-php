@@ -35,6 +35,10 @@ class Mailin
 		$time_header = 'X-mailin-date:'.$c_date_time;
 		$auth_header = 'Authorization:'.$this->access_key.":".base64_encode(hash_hmac('sha1' , utf8_encode($sign_string) ,$this->secret_key));
 		$content_header = "Content-Type:application/json";
+		if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+			// Windows only over-ride
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+		}
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array($time_header,$auth_header,$content_header));
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
