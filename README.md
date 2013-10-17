@@ -95,5 +95,5 @@ List of API calls that you can make, you can click to read more about it.
  * [update_webhook](https://apidocs.mailinblue.com/webhooks/#4)($id,$url,$description,$events) - Editing a webhook
  * [delete_bounces](https://apidocs.mailinblue.com/bounces/)($start_date,$end_date,$email) - Deleting bounces
  * [send_email](https://apidocs.mailinblue.com/mail/)($cc,$text,$bcc,$replyto,$html,$email_to,$attachment,$email_from,$subject) - Sending out a transactional email
- * [send_template_campaign](https://apidocs.mailinblue.com/template/)($id,$cc,$to,$from,$attr,$bcc) - Send templates created on mailin, through mailin smtp 
+ * [send_transactional_template](https://apidocs.mailinblue.com/template/)($id,$cc,$to,$from,$attr,$bcc) - Send templates created on mailin, through mailin smtp 
 
