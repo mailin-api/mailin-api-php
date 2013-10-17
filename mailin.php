@@ -249,7 +249,7 @@ class Mailin
         {
                 return $this->post("bounces",json_encode(array("start_date"=>$start_date,"end_date"=>$end_date,"email"=>$email)));
         }
-        public function send_template_campaign($id,$cc,$to,$from,$attr,$bcc)
+        public function send_transactional_template($id,$cc,$to,$from,$attr,$bcc)
         {
                 return $this->put("template/".$id,json_encode(array("cc"=>$cc,"to"=>$to,"from"=>$from,"attr"=>$attr,"bcc"=>$bcc)));
         }
