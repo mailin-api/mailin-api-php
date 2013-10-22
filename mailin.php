@@ -75,7 +75,7 @@ class Mailin
         }
         public function send_sms($text,$tag,$web_url,$sms_from,$sms_to)
         {
-                return $this->post("sms",json_encode(array("text"=>$text,"tag"=>$tag,"web_url"=>$web_url,"sms_from"=>$sms_from,"sms_to"=>$sms_to)));
+                return $this->post("sms",json_encode(array("text"=>$text,"tag"=>$tag,"web_url"=>$web_url,"from"=>$sms_from,"to"=>$sms_to)));
         }
         public function get_campaigns()
         {
