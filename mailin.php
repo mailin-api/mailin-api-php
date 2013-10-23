@@ -151,7 +151,7 @@ class Mailin
         }
         public function send_email($cc,$text,$bcc,$replyto,$html,$email_to,$attachment,$email_from,$subject)
         {
-                return $this->post("email",json_encode(array("cc"=>$cc,"text"=>$text,"bcc"=>$bcc,"replyto"=>$replyto,"html"=>$html,"email_to"=>$email_to,"attachment"=>$attachment,"email_from"=>$email_from,"subject"=>$subject)));
+                return $this->post("email",json_encode(array("cc"=>$cc,"text"=>$text,"bcc"=>$bcc,"replyto"=>$replyto,"html"=>$html,"to"=>$email_to,"attachment"=>$attachment,"from"=>$email_from,"subject"=>$subject)));
         }
         public function get_webhooks()
         {
