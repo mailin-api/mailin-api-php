@@ -1,8 +1,8 @@
 # Examples
 
- * tutorial.php - Sending a transactional email
- * tutorial1.php - Creating campaigns and other operations [Work in progress]
- * tutorial2.php - Creating Lists and other operations [Work in progress]
+ * tutorial1.php - Sending a transactional email
+ * tutorial2.php - Get all campaigns
+ * tutorial3.php - Send an SMS
 
 # Available functions
 

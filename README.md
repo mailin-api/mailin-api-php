@@ -42,7 +42,7 @@ $mailin = new Mailin('https://api.mailinblue.com/v1.0','Your access key','Your s
  * This will send an email to to@email.com, without any CC or BCC without any attachements.
  *
  */
-$mailin->send_email(array("test1@gmail.com"=>"name1"),array(),array(),array(),array("test2@gmail.com"=>"Reply name"),"Subject","Text body","HTML body",array());
+var_dump($mailin->send_email(array(),"This is the text",array(),array("test1@gmail.com"=>"name1"),"This is the HTML",array("dipankarsarkar@gmail.com"=>"Dipankar"),array(),array("super@desinerd.com"=>"test"),"Subject"));
 
 ?>
 ```
@@ -51,7 +51,7 @@ $mailin->send_email(array("test1@gmail.com"=>"name1"),array(),array(),array(),ar
 
 ## Available functions
 
-List of API calls that you can make, you can click to read more about it.
+List of API calls that you can make, you can click to read more about it. Please do note that the order of parameters are important.
  * [get_account](https://apidocs.mailinblue.com/account/)() - Get your account information
  * [get_campaigns](https://apidocs.mailinblue.com/campaign/#1)() - Get list of all campaigns
  * [get_campaign](https://apidocs.mailinblue.com/campaign/#2)($id) - Get specific campaign object

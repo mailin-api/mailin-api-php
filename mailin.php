@@ -254,6 +254,4 @@ class Mailin
                 return $this->put("template/".$id,json_encode(array("cc"=>$cc,"to"=>$to,"from"=>$from,"attr"=>$attr,"bcc"=>$bcc)));
         }
 }
-
 ?>
-

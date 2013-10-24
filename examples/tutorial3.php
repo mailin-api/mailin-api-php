@@ -7,9 +7,9 @@ require('../mailin.php');
  */
 $mailin = new Mailin('https://api.mailinblue.com/v1.0','Your access key','Your secret key');
 /*
- * This will get all your campaigns
+ * This will send an SMS
  *
  */
-var_dump($mailin->get_campaigns());
+var_dump($mailin->send_sms("This is a test","tag1","http://desinerd.com","Dipankar","919811452098"));
 
 ?>
