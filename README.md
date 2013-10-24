@@ -4,6 +4,8 @@ This is the mailinblue PHP library.It implements the various exposed APIs that y
 
 It currently supports all the API calls for v1.0. Each call returns an Object that is documented in our API docs, here are the objects.
 
+### Campaign APIs
+
  * Account
  * Campaign
  * Campaign statistics
@@ -11,7 +13,6 @@ It currently supports all the API calls for v1.0. Each call returns an Object th
  * List
  * Attribute
  * User
- * SMS
  * Process
 
 ### SMTP APIs
@@ -23,6 +24,10 @@ It currently supports all the API calls for v1.0. Each call returns an Object th
  * Report
  * Statistics
  * Webhooks
+
+### SMS API
+ 
+ * SMS
 
 ## Quickstart
 
@@ -52,6 +57,7 @@ var_dump($mailin->send_email(array(),"This is the text",array(),array("test1@gma
 ## Available functions
 
 List of API calls that you can make, you can click to read more about it. Please do note that the order of parameters are important.
+
  * [get_account](https://apidocs.mailinblue.com/account/)() - Get your account information
  * [get_campaigns](https://apidocs.mailinblue.com/campaign/#1)() - Get list of all campaigns
  * [get_campaign](https://apidocs.mailinblue.com/campaign/#2)($id) - Get specific campaign object
