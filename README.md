@@ -31,9 +31,9 @@ It currently supports all the API calls for v1.0. Each call returns an Object th
 
 ## Quickstart
 
-1. You will need to first get the Access key and Secret key from [Mailinblue](https://www.mailinblue.com).
+ * You will need to first get the Access key and Secret key from [Mailinblue](https://www.mailinblue.com).
 
-2. Assuming that you have cloned this git repo, or downloaded mailin.php. You can use this small sample script to get started
+ * Assuming that you have cloned this git repo, or downloaded mailin.php. You can use this small sample script to get started
 
 ```PHP
 <?php
@@ -47,16 +47,18 @@ $mailin = new Mailin('https://api.mailinblue.com/v1.0','Your access key','Your s
  * This will send an email to to@email.com, without any CC or BCC without any attachements.
  *
  */
-var_dump($mailin->send_email(array(),"This is the text",array(),array("test1@gmail.com","reply to!"),"This is the HTML",array("to@email.com"=>"Dipankar"),array(),array("super@desinerd.com","sender email!"),"Subject"));
+var_dump($mailin->send_email(array(),"This is the text",array(),array("replyto@email.com","reply to!"),"This is the HTML",array("to@email.com"=>"to whom!"),array(),array("sender@email.com","sender email!"),"Subject"));
 
 ?>
 ```
 
-3. To explore more, you should visit the [Mailin API documentation](https://apidocs.mailinblue.com).
+ * To explore more, you should visit the [Mailin API documentation](https://apidocs.mailinblue.com).
 
 ## Available functions
 
 List of API calls that you can make, you can click to read more about it. Please do note that the order of parameters are important.
+
+### Campaign calls
 
  * [get_account](https://apidocs.mailinblue.com/account/)() - Get your account information
  * [get_campaigns](https://apidocs.mailinblue.com/campaign/#1)() - Get list of all campaigns
@@ -91,9 +93,11 @@ List of API calls that you can make, you can click to read more about it. Please
  * [update_user](https://apidocs.mailinblue.com/user/#3)($id,$attributes,$blacklisted,$listid) - Edit a user/email information
  * [import_users](https://apidocs.mailinblue.com/user/#5)($url,$listids,$notify_url,$name) - Import users/emails
  * [export_users](https://apidocs.mailinblue.com/user/#6)($export_attrib,$filer,$notify_url) - Export users/emails
- * [send_sms](https://apidocs.mailinblue.com/sms/)($text,$tag,$web_url,$sms_from,$sms_to) - Sending a SMS
  * [get_processes](https://apidocs.mailinblue.com/process/#1)() - Get information about all background processes
  * [get_process](https://apidocs.mailinblue.com/process/#2)($id) - Get information about a specific process
+
+### SMTP calls
+
  * [get_report](https://apidocs.mailinblue.com/report/)($limit,$start_date,$end_date,$offset,$date,$days,$email) - Retrieve information for all report events
  * [get_statistics](https://apidocs.mailinblue.com/statistics/)($aggregate,$tag,$days,$end_date,$start_date) - Get aggregate statistics about emails sent
  * [get_webhooks](https://apidocs.mailinblue.com/webhooks/#1)() - List registered webhooks
@@ -105,3 +109,6 @@ List of API calls that you can make, you can click to read more about it. Please
  * [send_email](https://apidocs.mailinblue.com/mail/)($cc,$text,$bcc,$replyto,$html,$email_to,$attachment,$email_from,$subject) - Sending out a transactional email
  * [send_transactional_template](https://apidocs.mailinblue.com/template/)($id,$cc,$to,$from,$attr,$bcc) - Send templates created on mailin, through mailin smtp 
 
+### SMS call
+
+ * [send_sms](https://apidocs.mailinblue.com/sms/)($text,$tag,$web_url,$sms_from,$sms_to) - Sending a SMS
