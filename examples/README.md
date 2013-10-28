@@ -4,7 +4,11 @@
  * tutorial2.php - Get all campaigns
  * tutorial3.php - Send an SMS
 
-# Available functions
+## Available functions
+
+List of API calls that you can make, you can click to read more about it. Please do note that the order of parameters are important.
+
+### Campaign calls
 
  * [get_account](https://apidocs.mailinblue.com/account/)() - Get your account information
  * [get_campaigns](https://apidocs.mailinblue.com/campaign/#1)() - Get list of all campaigns
@@ -39,9 +43,11 @@
  * [update_user](https://apidocs.mailinblue.com/user/#3)($id,$attributes,$blacklisted,$listid) - Edit a user/email information
  * [import_users](https://apidocs.mailinblue.com/user/#5)($url,$listids,$notify_url,$name) - Import users/emails
  * [export_users](https://apidocs.mailinblue.com/user/#6)($export_attrib,$filer,$notify_url) - Export users/emails
- * [send_sms](https://apidocs.mailinblue.com/sms/)($text,$tag,$web_url,$sms_from,$sms_to) - Sending a SMS
  * [get_processes](https://apidocs.mailinblue.com/process/#1)() - Get information about all background processes
  * [get_process](https://apidocs.mailinblue.com/process/#2)($id) - Get information about a specific process
+
+### SMTP calls
+
  * [get_report](https://apidocs.mailinblue.com/report/)($limit,$start_date,$end_date,$offset,$date,$days,$email) - Retrieve information for all report events
  * [get_statistics](https://apidocs.mailinblue.com/statistics/)($aggregate,$tag,$days,$end_date,$start_date) - Get aggregate statistics about emails sent
  * [get_webhooks](https://apidocs.mailinblue.com/webhooks/#1)() - List registered webhooks
@@ -51,3 +57,8 @@
  * [update_webhook](https://apidocs.mailinblue.com/webhooks/#4)($id,$url,$description,$events) - Editing a webhook
  * [delete_bounces](https://apidocs.mailinblue.com/bounces/)($start_date,$end_date,$email) - Deleting bounces
  * [send_email](https://apidocs.mailinblue.com/mail/)($cc,$text,$bcc,$replyto,$html,$email_to,$attachment,$email_from,$subject) - Sending out a transactional email
+ * [send_transactional_template](https://apidocs.mailinblue.com/template/)($id,$cc,$to,$from,$attr,$bcc) - Send templates created on mailin, through mailin smtp 
+
+### SMS call
+
+ * [send_sms](https://apidocs.mailinblue.com/sms/)($text,$tag,$web_url,$sms_from,$sms_to) - Sending a SMS
