@@ -73,7 +73,7 @@ class Mailin
         {
                 return $this->get("account","");
         }
-        public function send_sms($text,$tag,$web_url,$sms_from,$sms_to)
+        public function send_sms($sms_to,$sms_from,$text,$web_url,$tag)
         {
                 return $this->post("sms",json_encode(array("text"=>$text,"tag"=>$tag,"web_url"=>$web_url,"from"=>$sms_from,"to"=>$sms_to)));
         }
@@ -149,7 +149,7 @@ class Mailin
         {
                 return $this->delete("list/".$id."/users",json_encode(array("users"=>$users)));
         }
-        public function send_email($cc,$text,$bcc,$replyto,$html,$email_to,$attachment,$email_from,$subject)
+        public function send_email($email_to,$subject,$email_from,$html,$text,$cc,$bcc,$replyto,$attachment)
         {
                 return $this->post("email",json_encode(array("cc"=>$cc,"text"=>$text,"bcc"=>$bcc,"replyto"=>$replyto,"html"=>$html,"to"=>$email_to,"attachment"=>$attachment,"from"=>$email_from,"subject"=>$subject)));
         }
@@ -249,9 +249,9 @@ class Mailin
         {
                 return $this->post("bounces",json_encode(array("start_date"=>$start_date,"end_date"=>$end_date,"email"=>$email)));
         }
-        public function send_transactional_template($id,$cc,$to,$from,$attr,$bcc)
+        public function send_transactional_template($id,$to,$cc,$bcc,$attr)
         {
-                return $this->put("template/".$id,json_encode(array("cc"=>$cc,"to"=>$to,"from"=>$from,"attr"=>$attr,"bcc"=>$bcc)));
+                return $this->put("template/".$id,json_encode(array("cc"=>$cc,"to"=>$to,"attr"=>$attr,"bcc"=>$bcc)));
         }
 }
 ?>
