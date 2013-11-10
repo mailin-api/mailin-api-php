@@ -56,9 +56,9 @@ List of API calls that you can make, you can click to read more about it. Please
  * [delete_webhook](https://apidocs.mailinblue.com/webhooks/#5)($id) - Deleting a webhook
  * [update_webhook](https://apidocs.mailinblue.com/webhooks/#4)($id,$url,$description,$events) - Editing a webhook
  * [delete_bounces](https://apidocs.mailinblue.com/bounces/)($start_date,$end_date,$email) - Deleting bounces
- * [send_email](https://apidocs.mailinblue.com/mail/)($cc,$text,$bcc,$replyto,$html,$email_to,$attachment,$email_from,$subject) - Sending out a transactional email
- * [send_transactional_template](https://apidocs.mailinblue.com/template/)($id,$cc,$to,$from,$attr,$bcc) - Send templates created on mailin, through mailin smtp 
+ * [send_email](https://apidocs.mailinblue.com/mail/)($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$attachment) - Sending out a transactional email
+ * [send_transactional_template](https://apidocs.mailinblue.com/template/)($id,$to,$cc,$bcc,$attr) - Send templates created on mailin, through mailin smtp 
 
 ### SMS call
 
- * [send_sms](https://apidocs.mailinblue.com/sms/)($text,$tag,$web_url,$sms_from,$sms_to) - Sending a SMS
+ * [send_sms](https://apidocs.mailinblue.com/sms/)($to,$from,$text,$web_url,$tag) - Sending a SMS
