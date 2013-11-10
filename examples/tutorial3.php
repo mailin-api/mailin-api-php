@@ -10,6 +10,6 @@ $mailin = new Mailin('https://api.mailinblue.com/v1.0','Your access key','Your s
  * This will send an SMS
  *
  */
-var_dump($mailin->send_sms("This is a test","tag1","http://desinerd.com","Dipankar","919811452098"));
+var_dump($mailin->send_sms("1231231313","From!","This is a test","http://example.com","tag1"));
 
 ?>
