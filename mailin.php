@@ -103,7 +103,7 @@ class Mailin
         }
         public function campaign_recipients_export($id,$notify_url,$type)
         {
-                return $this->post("campaign/".$id."/report",json_encode(array("notify_url"=>$notify_url,"type"=>$type)));
+                return $this->post("campaign/".$id."/recipients",json_encode(array("notify_url"=>$notify_url,"type"=>$type)));
         }
         public function get_processes()
         {
