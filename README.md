@@ -33,21 +33,30 @@ It currently supports all the API calls for v1.0. Each call returns an Object th
 
  * You will need to first get the Access key and Secret key from [Sendinblue](https://www.sendinblue.com).
 
- * Assuming that you have cloned this git repo, or downloaded mailin.php. You can use this small sample script to get started
+ * Assuming that you have cloned this git repo, or downloaded mailin.php and its in the same directory than the script. You can use this small sample script to get started
 
 ```PHP
 <?php
-require('../mailin.php');
+require('mailin.php');
 /*
  * This will initiate the API with the endpoint and your access and secret key.
  *
  */
-$mailin = new Mailin('https://api.sendinblue.com/v1.0','Your access key','Your secret key');
-/*
- * This will send an email to to@email.com, without any CC or BCC without any attachements.
- *
- */
-var_dump($mailin->send_email(array("to@email.com"=>"to whom!"),"Subject",array("sender@email.com","sender email!"),"This is the HTML","This is the text",array(),array(),array("replyto@email.com","reply to!"),array()));
+$mailin = new Mailin('https://api.sendinblue.com/v1.0','Your access key','Your secret key');  
+
+/** Prepare variables for easy use **/ 
+
+$to = array("to@example.net"=>"to whom!"); //mandatory
+$subject = "My subject"; //mandatory
+$from = array("from@email.com","from email!"); //mandatory
+$html = "This is the <h1>HTML</h1>"; //mandatory
+$text= "This is the text";
+$cc = array("cc@example.net"=>"cc whom!"); 
+$bcc = array("bcc@example.net"=>"bcc whom!");
+$replyto = array("replyto@email.com","reply to!"); 
+$attachment = array(); //provide the absolute url of the attachment/s 
+
+var_dump($mailin->send_email($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$attachment));
 
 ?>
 ```
