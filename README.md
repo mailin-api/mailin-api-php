@@ -71,12 +71,12 @@ List of API calls that you can make, you can click to read more about it. Please
 
  * [get_account](https://apidocs.sendinblue.com/account/)() - Get your account information
  * [get_campaigns](https://apidocs.sendinblue.com/campaign/#1)() - Get list of all campaigns
- * [get_campaign](https://apidocs.sendinblue.com/campaign/#2)($id) - Get specific campaign object
- * [create_campaign](https://apidocs.sendinblue.com/campaign/#3)($category,$from_name,$name,$bat_sent,$tags,$html_content,$html_url,$listid,$scheduled_date,$subject) - Create a campaign
- * [delete_campaign](https://apidocs.sendinblue.com/campaign/#4)($id) - Delete a campaign
- * [update_campaign](https://apidocs.sendinblue.com/campaign/#5)($id,$category,$from_name,$name,$bat_sent,$tags,$html_content,$html_url,$listid,$scheduled_date,$subject) - Update campaign information
- * [campaign_report_email](https://apidocs.sendinblue.com/campaign/#6)($id,$lang,$email_subject,$email_to,$email_content_type,$email_bcc,$email_cc,$email_body) - Sending reports to specific emails
- * [campaign_recipients_export](https://apidocs.sendinblue.com/campaign/#7)($id,$notify_url,$type) - Export recipients of a campaign
+ * [get_campaign](https://apidocs.sendinblue.com/campaign/#1)($id) - Get specific campaign object
+ * [create_campaign](https://apidocs.sendinblue.com/campaign/#2)($category,$from_name,$name,$bat_sent,$tags,$html_content,$html_url,$listid,$scheduled_date,$subject) - Create a campaign
+ * [delete_campaign](https://apidocs.sendinblue.com/campaign/#3)($id) - Delete a campaign
+ * [update_campaign](https://apidocs.sendinblue.com/campaign/#4)($id,$category,$from_name,$name,$bat_sent,$tags,$html_content,$html_url,$listid,$scheduled_date,$subject) - Update campaign information
+ * [campaign_report_email](https://apidocs.sendinblue.com/campaign/#5)($id,$lang,$email_subject,$email_to,$email_content_type,$email_bcc,$email_cc,$email_body) - Sending reports to specific emails
+ * [campaign_recipients_export](https://apidocs.sendinblue.com/campaign/#6)($id,$notify_url,$type) - Export recipients of a campaign
  * [get_campaignstats](https://apidocs.sendinblue.com/campaign-statistics/#1)() - Get all the campaign stats
  * [get_campaignstat](https://apidocs.sendinblue.com/campaign-statistics/#2)($id) - Get all the campaign details for campaign with the specific id
  * [get_folders](https://apidocs.sendinblue.com/folder/#1)() - Get list of all the folder details.
