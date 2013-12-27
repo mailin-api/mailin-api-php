@@ -217,9 +217,9 @@ class Mailin
         {
                 return $this->post("attribute",json_encode(array("type"=>$type,"data"=>$data)));
         }
-        public function delete_attribute($id,$data)
+        public function delete_attribute($type,$data)
         {
-                return $this->post("attribute/".$id,json_encode(array("data"=>$data)));
+                return $this->post("attribute/".$type,json_encode(array("data"=>$data)));
         }
         public function get_report($limit,$start_date,$end_date,$offset,$date,$days,$email)
         {
