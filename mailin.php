@@ -85,17 +85,17 @@ class Mailin
         {
                 return $this->get("campaign/".$id,"");
         }
-        public function create_campaign($category,$from_name,$name,$bat_sent,$tags,$html_content,$html_url,$listid,$scheduled_date,$subject)
+        public function create_campaign($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email)
         {
-                return $this->post("campaign",json_encode(array("category"=>$category,"from_name"=>$from_name,"name"=>$name,"bat_sent"=>$bat_sent,"tags"=>$tags,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject)));
+                return $this->post("campaign",json_encode(array("category"=>$category,"from_name"=>$from_name,"name"=>$name,"bat_sent"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email)));
         }
         public function delete_campaign($id)
         {
                 return $this->delete("campaign/".$id,"");
         }
-        public function update_campaign($id,$category,$from_name,$name,$bat_sent,$tags,$html_content,$html_url,$listid,$scheduled_date,$subject)
+        public function update_campaign($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email)
         {
-                return $this->put("campaign/".$id,json_encode(array("category"=>$category,"from_name"=>$from_name,"name"=>$name,"bat_sent"=>$bat_sent,"tags"=>$tags,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject)));
+                return $this->put("campaign/".$id,json_encode(array("category"=>$category,"from_name"=>$from_name,"name"=>$name,"bat_sent"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email)));
         }
         public function campaign_report_email($id,$lang,$email_subject,$email_to,$email_content_type,$email_bcc,$email_cc,$email_body)
         {
@@ -189,21 +189,21 @@ class Mailin
         {
                 return $this->post("user",json_encode(array("attributes"=>$attributes,"blacklisted"=>$blacklisted,"email"=>$email,"listid"=>$listid)));
         }
-        public function delete_user($id)
+        public function delete_user($email)
         {
-                return $this->delete("user/".$id,"");
+                return $this->delete("user/".$email,"");
         }
-        public function update_user($id,$attributes,$blacklisted,$listid)
+        public function update_user($email,$attributes,$blacklisted,$listid)
         {
-                return $this->put("user/".$id,json_encode(array("attributes"=>$attributes,"blacklisted"=>$blacklisted,"listid"=>$listid)));
+                return $this->put("user/".$email,json_encode(array("attributes"=>$attributes,"blacklisted"=>$blacklisted,"listid"=>$listid)));
         }
         public function import_users($url,$listids,$notify_url,$name)
         {
                 return $this->post("user/import",json_encode(array("url"=>$url,"listids"=>$listids,"notify_url"=>$notify_url,"name"=>$name)));
         }
-        public function export_users($export_attrib,$filer,$notify_url)
+        public function export_users($export_attrib,$filter,$notify_url)
         {
-                return $this->post("user/export",json_encode(array("export_attrib"=>$export_attrib,"filer"=>$filer,"notify_url"=>$notify_url)));
+                return $this->post("user/export",json_encode(array("export_attrib"=>$export_attrib,"filter"=>$filter,"notify_url"=>$notify_url)));
         }
         public function get_attributes()
         {

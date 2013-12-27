@@ -98,10 +98,10 @@ List of API calls that you can make, you can click to read more about it. Please
  * [get_user](https://apidocs.sendinblue.com/user/#2)($id) - Get information about a user/email
  * [get_user_stats](https://apidocs.sendinblue.com/user/#7)($id) - Get event information about the user/email
  * [create_user](https://apidocs.sendinblue.com/user/#1)($attributes,$blacklisted,$email,$listid) - Add a new user/email
- * [delete_user](https://apidocs.sendinblue.com/user/#4)($id) - Delete a user/email
- * [update_user](https://apidocs.sendinblue.com/user/#3)($id,$attributes,$blacklisted,$listid) - Edit a user/email information
+ * [delete_user](https://apidocs.sendinblue.com/user/#4)($email) - Deleting user from db is not permitted but this action will unlink him from all lists
+ * [update_user](https://apidocs.sendinblue.com/user/#3)($email,$attributes,$blacklisted,$listid) - Edit a user/email information
  * [import_users](https://apidocs.sendinblue.com/user/#5)($url,$listids,$notify_url,$name) - Import users/emails
- * [export_users](https://apidocs.sendinblue.com/user/#6)($export_attrib,$filer,$notify_url) - Export users/emails
+ * [export_users](https://apidocs.sendinblue.com/user/#6)($export_attrib,$filter,$notify_url) - Export users/emails
  * [get_processes](https://apidocs.sendinblue.com/process/#1)() - Get information about all background processes
  * [get_process](https://apidocs.sendinblue.com/process/#2)($id) - Get information about a specific process
 
@@ -115,7 +115,7 @@ List of API calls that you can make, you can click to read more about it. Please
  * [delete_webhook](https://apidocs.sendinblue.com/webhooks/#5)($id) - Deleting a webhook
  * [update_webhook](https://apidocs.sendinblue.com/webhooks/#4)($id,$url,$description,$events) - Editing a webhook
  * [delete_bounces](https://apidocs.sendinblue.com/bounces/)($start_date,$end_date,$email) - Deleting bounces
- * [send_email](https://apidocs.sendinblue.com/mail/)($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$attachment) - Sending out a transactional email
+ * [send_email](https://apidocs.sendinblue.com/tutorial-sending-transactional-email/)($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$attachment) - Sending out a transactional email
  * [send_transactional_template](https://apidocs.sendinblue.com/template/)($id,$to,$cc,$bcc,$attr) - Send templates created on mailin, through mailin smtp.
 
 ### SMS call
