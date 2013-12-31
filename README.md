@@ -91,11 +91,11 @@ List of API calls that you can make, you can click to read more about it. Please
  * [add_users_list](https://apidocs.sendinblue.com/list/#6)($id,$users) - Add users to a list
  * [delete_users_list](https://apidocs.sendinblue.com/list/#7)($id,$users) - Delete users from a list
  * [get_attributes](https://apidocs.sendinblue.com/attribute/#1)() - Listing all attributes
- * [get_attribute](https://apidocs.sendinblue.com/attribute/#2)($id) - Listing a certain type attributes
+ * [get_attribute](https://apidocs.sendinblue.com/attribute/#2)($type) - Listing a certain type attributes
  * [create_attribute](https://apidocs.sendinblue.com/attribute/#3)($type,$data) - Creating attributes
  * [delete_attribute](https://apidocs.sendinblue.com/attribute/#4)($type,$data) - Deleting attributes of the given type
- * [get_user](https://apidocs.sendinblue.com/user/#2)($id) - Get information about a user/email
- * [get_user_stats](https://apidocs.sendinblue.com/user/#7)($id) - Get event information about the user/email
+ * [get_user](https://apidocs.sendinblue.com/user/#2)($email) - Get information about a user/email
+ * [get_user_stats](https://apidocs.sendinblue.com/user/#7)($email) - Get event information about the user/email
  * [create_user](https://apidocs.sendinblue.com/user/#1)($attributes,$blacklisted,$email,$listid) - Add a new user/email
  * [delete_user](https://apidocs.sendinblue.com/user/#4)($email) - Deleting user from db is not permitted but this action will unlink him from all lists
  * [update_user](https://apidocs.sendinblue.com/user/#3)($email,$attributes,$blacklisted,$listid) - Edit a user/email information

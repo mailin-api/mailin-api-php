@@ -177,13 +177,13 @@ class Mailin
         {
                 return $this->post("statistics",json_encode(array("aggregate"=>$aggregate,"tag"=>$tag,"days"=>$days,"end_date"=>$end_date,"start_date"=>$start_date)));
         }
-        public function get_user($id)
+        public function get_user($email)
         {
-                return $this->get("user/".$id,"");
+                return $this->get("user/".$email,"");
         }
-        public function get_user_stats($id,$type)
+        public function get_user_stats($email)
         {
-                return $this->get("user/".$id."/".$type,"");
+                return $this->get("user/".$email,"");
         }
         public function create_user($attributes,$blacklisted,$email,$listid)
         {
@@ -209,9 +209,9 @@ class Mailin
         {
                 return $this->get("attribute","");
         }
-        public function get_attribute($id)
+        public function get_attribute($type)
         {
-                return $this->get("attribute/".$id,"");
+                return $this->get("attribute/".$type,"");
         }
         public function create_attribute($type,$data)
         {
