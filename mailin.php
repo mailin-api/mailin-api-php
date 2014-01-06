@@ -149,9 +149,9 @@ class Mailin
         {
                 return $this->delete("list/".$id."/users",json_encode(array("users"=>$users)));
         }
-        public function send_email($email_to,$subject,$email_from,$html,$text,$cc,$bcc,$replyto,$attachment)
+        public function send_email($email_to,$subject,$email_from,$html,$text,$cc,$bcc,$replyto,$attachment,$headers)
         {
-                return $this->post("email",json_encode(array("cc"=>$cc,"text"=>$text,"bcc"=>$bcc,"replyto"=>$replyto,"html"=>$html,"to"=>$email_to,"attachment"=>$attachment,"from"=>$email_from,"subject"=>$subject)));
+                return $this->post("email",json_encode(array("cc"=>$cc,"text"=>$text,"bcc"=>$bcc,"replyto"=>$replyto,"html"=>$html,"to"=>$email_to,"attachment"=>$attachment,"from"=>$email_from,"subject"=>$subject,"headers"=>$headers)));
         }
         public function get_webhooks()
         {

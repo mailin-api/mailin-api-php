@@ -18,5 +18,6 @@ $cc = array("cc@example.net"=>"cc whom!");
 $bcc = array("bcc@example.net"=>"bcc whom!");
 $replyto = array("replyto@email.com","reply to!"); 
 $attachment = array(); //provide the absolute url of the attachment/s 
+$headers = array("Content-Type"=> "text/html; charset=iso-8859-1","X-Ewiufkdsjfhn"=> "hello","X-Custom" => "Custom");
 
-var_dump($mailin->send_email($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$attachment));
+var_dump($mailin->send_email($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$attachment,$headers));
