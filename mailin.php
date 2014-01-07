@@ -193,9 +193,9 @@ class Mailin
         {
                 return $this->delete("user/".$email,"");
         }
-        public function update_user($email,$attributes,$blacklisted,$listid)
+        public function update_user($email,$attributes,$blacklisted,$listid,$listid_unlink)
         {
-                return $this->put("user/".$email,json_encode(array("attributes"=>$attributes,"blacklisted"=>$blacklisted,"listid"=>$listid)));
+                return $this->put("user/".$email,json_encode(array("attributes"=>$attributes,"blacklisted"=>$blacklisted,"listid"=>$listid,"listid_unlink"=>$listid_unlink)));
         }
         public function import_users($url,$listids,$notify_url,$name)
         {
