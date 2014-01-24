@@ -73,13 +73,13 @@ class Mailin
         {
                 return $this->get("account","");
         }
-        public function send_sms($sms_to,$sms_from,$text,$web_url,$tag)
+        public function send_sms($to,$from,$text,$web_url,$tag)
         {
-                return $this->post("sms",json_encode(array("text"=>$text,"tag"=>$tag,"web_url"=>$web_url,"from"=>$sms_from,"to"=>$sms_to)));
+                return $this->post("sms",json_encode(array("text"=>$text,"tag"=>$tag,"web_url"=>$web_url,"from"=>$from,"to"=>$to)));
         }
-        public function get_campaigns()
+        public function get_campaigns($type)
         {
-                return $this->get("campaign","");
+                return $this->get("campaign",json_encode(array("type"=>$type)));
         }
         public function get_campaign($id)
         {
@@ -113,14 +113,6 @@ class Mailin
         {
                 return $this->get("process/".$id,"");
         }
-        public function get_campaignstats()
-        {
-                return $this->get("campaignstat","");
-        }
-        public function get_campaignstat($id)
-        {
-                return $this->get("campaignstat/".$id,"");
-        }
         public function get_lists()
         {
                 return $this->get("list","");
@@ -149,9 +141,9 @@ class Mailin
         {
                 return $this->delete("list/".$id."/users",json_encode(array("users"=>$users)));
         }
-        public function send_email($email_to,$subject,$email_from,$html,$text,$cc,$bcc,$replyto,$attachment,$headers)
+        public function send_email($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$attachment,$headers)
         {
-                return $this->post("email",json_encode(array("cc"=>$cc,"text"=>$text,"bcc"=>$bcc,"replyto"=>$replyto,"html"=>$html,"to"=>$email_to,"attachment"=>$attachment,"from"=>$email_from,"subject"=>$subject,"headers"=>$headers)));
+                return $this->post("email",json_encode(array("cc"=>$cc,"text"=>$text,"bcc"=>$bcc,"replyto"=>$replyto,"html"=>$html,"to"=>$to,"attachment"=>$attachment,"from"=>$from,"subject"=>$subject,"headers"=>$headers)));
         }
         public function get_webhooks()
         {

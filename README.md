@@ -70,14 +70,13 @@ List of API calls that you can make, you can click to read more about it. Please
 ### Campaign calls
 
  * [get_account](https://apidocs.sendinblue.com/account/)() - Get your account information
- * [get_campaigns](https://apidocs.sendinblue.com/campaign/#1)() - Get list of all campaigns
+ * [get_campaigns](https://apidocs.sendinblue.com/campaign/#1)($type) - Get list of all campaigns or of specific type: "classic", "trigger", "sms"
  * [get_campaign](https://apidocs.sendinblue.com/campaign/#1)($id) - Get specific campaign object
  * [create_campaign](https://apidocs.sendinblue.com/campaign/#2)($category,$from_name,$name,$bat_sent,$tags,$html_content,$html_url,$listid,$scheduled_date,$subject) - Create a campaign
  * [delete_campaign](https://apidocs.sendinblue.com/campaign/#3)($id) - Delete a campaign
  * [update_campaign](https://apidocs.sendinblue.com/campaign/#4)($id,$category,$from_name,$name,$bat_sent,$tags,$html_content,$html_url,$listid,$scheduled_date,$subject) - Update campaign information
  * [campaign_report_email](https://apidocs.sendinblue.com/campaign/#5)($id,$lang,$email_subject,$email_to,$email_content_type,$email_bcc,$email_cc,$email_body) - Sending reports to specific emails
  * [campaign_recipients_export](https://apidocs.sendinblue.com/campaign/#6)($id,$notify_url,$type) - Export recipients of a campaign
- * [get_campaignstat](https://apidocs.sendinblue.com/campaign-statistics/#2)($id) - Get all the campaign details for campaign with the specific id
  * [get_folders](https://apidocs.sendinblue.com/folder/#1)() - Get list of all the folder details.
  * [get_folder](https://apidocs.sendinblue.com/folder/#2)($id) - Get all the folder details for folder with id <id>
  * [create_folder](https://apidocs.sendinblue.com/folder/#3)($name) - Create a folder
@@ -95,7 +94,6 @@ List of API calls that you can make, you can click to read more about it. Please
  * [create_attribute](https://apidocs.sendinblue.com/attribute/#3)($type,$data) - Creating attributes
  * [delete_attribute](https://apidocs.sendinblue.com/attribute/#4)($type,$data) - Deleting attributes of the given type
  * [get_user](https://apidocs.sendinblue.com/user/#2)($email) - Get information about a user/email
- * [get_user_stats](https://apidocs.sendinblue.com/user/#7)($email) - Get event information about the user/email
  * [create_user](https://apidocs.sendinblue.com/user/#1)($attributes,$blacklisted,$email,$listid) - Add a new user/email
  * [delete_user](https://apidocs.sendinblue.com/user/#4)($email) - Deleting user from db is not permitted but this action will unlink him from all lists
  * [update_user](https://apidocs.sendinblue.com/user/#3)($email,$attributes,$blacklisted,$listid,$listid_unlink) - Edit a user/email information
