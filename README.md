@@ -2,32 +2,6 @@
 
 This is the mailinblue PHP library.It implements the various exposed APIs that you can read more about on https://apidocs.sendinblue.com.
 
-It currently supports all the API calls for v1.0. Each call returns an Object that is documented in our API docs, here are the objects.
-
-### Campaign APIs
-
- * Account
- * Campaign
- * Campaign statistics
- * Folder
- * List
- * Attribute
- * User
- * Process
-
-### SMTP APIs
-
- * File
- * Mail
- * Bounces
- * Template
- * Report
- * Statistics
- * Webhooks
-
-### SMS API
- 
- * SMS
 
 ## Quickstart
 
@@ -72,9 +46,9 @@ List of API calls that you can make, you can click to read more about it. Please
  * [get_account](https://apidocs.sendinblue.com/account/)() - Get your account information
  * [get_campaigns](https://apidocs.sendinblue.com/campaign/#1)($type) - Get list of all campaigns or of specific type: "classic", "trigger", "sms"
  * [get_campaign](https://apidocs.sendinblue.com/campaign/#1)($id) - Get specific campaign object
- * [create_campaign](https://apidocs.sendinblue.com/campaign/#2)($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to) - Create a campaign
+ * [create_campaign](https://apidocs.sendinblue.com/campaign/#2)($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$exclude_list) - Create a campaign
  * [delete_campaign](https://apidocs.sendinblue.com/campaign/#3)($id) - Delete a campaign
- * [update_campaign](https://apidocs.sendinblue.com/campaign/#4)($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to) - Update campaign information
+ * [update_campaign](https://apidocs.sendinblue.com/campaign/#4)($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$exclude_list) - Update campaign information
  * [campaign_report_email](https://apidocs.sendinblue.com/campaign/#5)($id,$lang,$email_subject,$email_to,$email_content_type,$email_bcc,$email_cc,$email_body) - Sending reports to specific emails
  * [campaign_recipients_export](https://apidocs.sendinblue.com/campaign/#6)($id,$notify_url,$type) - Export recipients of a campaign
  * [get_folders](https://apidocs.sendinblue.com/folder/#1)() - Get list of all the folder details.

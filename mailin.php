@@ -85,17 +85,17 @@ class Mailin
         {
                 return $this->get("campaign/".$id,"");
         }
-        public function create_campaign($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to)
+        public function create_campaign($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$exclude_list)
         {
-                return $this->post("campaign",json_encode(array("category"=>$category,"from_name"=>$from_name,"name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to)));
+                return $this->post("campaign",json_encode(array("category"=>$category,"from_name"=>$from_name,"name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,'exclude_list'=>$exclude_list)));
         }
         public function delete_campaign($id)
         {
                 return $this->delete("campaign/".$id,"");
         }
-        public function update_campaign($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to)
+        public function update_campaign($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$exclude_list)
         {
-                return $this->put("campaign/".$id,json_encode(array("category"=>$category,"from_name"=>$from_name,"name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to)));
+                return $this->put("campaign/".$id,json_encode(array("category"=>$category,"from_name"=>$from_name,"name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,'exclude_list'=>$exclude_list)));
         }
         public function campaign_report_email($id,$lang,$email_subject,$email_to,$email_content_type,$email_bcc,$email_cc,$email_body)
         {
@@ -139,7 +139,7 @@ class Mailin
         }
         public function delete_users_list($id,$users)
         {
-                return $this->delete("list/".$id."/users",json_encode(array("users"=>$users)));
+                return $this->delete("list/".$id."/delusers",json_encode(array("users"=>$users)));
         }
         public function send_email($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$attachment,$headers)
         {
