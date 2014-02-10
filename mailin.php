@@ -173,10 +173,6 @@ class Mailin
         {
                 return $this->get("user/".$email,"");
         }
-        public function get_user_stats($email)
-        {
-                return $this->get("user/".$email,"");
-        }
         public function create_user($attributes,$blacklisted,$email,$listid)
         {
                 return $this->post("user",json_encode(array("attributes"=>$attributes,"blacklisted"=>$blacklisted,"email"=>$email,"listid"=>$listid)));
