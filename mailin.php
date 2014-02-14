@@ -133,6 +133,10 @@ class Mailin
         {
                 return $this->put("list/".$id,json_encode(array("list_name"=>$list_name,"list_parent"=>$list_parent)));
         }
+        public function display_list_users($listids,$page,$page_limit)
+        {
+                return $this->get("list/display",json_encode(array("listids"=>$listids, "page"=>$page, "page_limit"=>$page_limit)));
+        }
         public function add_users_list($id,$users)
         {
                 return $this->post("list/".$id."/users",json_encode(array("users"=>$users)));
