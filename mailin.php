@@ -77,6 +77,14 @@ class Mailin
         {
                 return $this->post("sms",json_encode(array("text"=>$text,"tag"=>$tag,"web_url"=>$web_url,"from"=>$from,"to"=>$to)));
         }
+        public function create_sms_campaign($camp_name,$sender,$content,$bat_sent,$listids,$exclude_list,$scheduled_date)
+        {
+                return $this->post("sms",json_encode(array("name"=>$camp_name,"sender"=>$sender,"content"=>$content,"bat"=>$bat_sent,"listid"=>$listids,"exclude_list"=>$exclude_list, "scheduled_date"=>$scheduled_date)));
+        }
+        public function update_sms_campaign($id,$camp_name,$sender,$content,$bat_sent,$listids,$exclude_list,$scheduled_date)
+        {
+                return $this->put("sms/".$id,json_encode(array("name"=>$camp_name,"sender"=>$sender,"content"=>$content,"bat"=>$bat_sent,"listid"=>$listids,"exclude_list"=>$exclude_list, "scheduled_date"=>$scheduled_date)));
+        }
         public function get_campaigns($type)
         {
                 return $this->get("campaign",json_encode(array("type"=>$type)));
