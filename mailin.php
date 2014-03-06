@@ -85,6 +85,10 @@ class Mailin
         {
                 return $this->put("sms/".$id,json_encode(array("name"=>$camp_name,"sender"=>$sender,"content"=>$content,"bat"=>$bat_sent,"listid"=>$listids,"exclude_list"=>$exclude_list, "scheduled_date"=>$scheduled_date)));
         }
+        public function send_bat_sms($campid,$mobilephone)
+        {
+                return $this->get("sms/".$campid,json_encode(array("to"=>$mobilephone)));
+        }
         public function get_campaigns($type)
         {
                 return $this->get("campaign",json_encode(array("type"=>$type)));
@@ -156,6 +160,10 @@ class Mailin
         public function send_email($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$attachment,$headers)
         {
                 return $this->post("email",json_encode(array("cc"=>$cc,"text"=>$text,"bcc"=>$bcc,"replyto"=>$replyto,"html"=>$html,"to"=>$to,"attachment"=>$attachment,"from"=>$from,"subject"=>$subject,"headers"=>$headers)));
+        }
+        public function send_bat_email($campid,$email_to)
+        {
+                return $this->get("email/".$campid,json_encode(array("email_to"=>$email_to)));
         }
         public function get_webhooks()
         {
