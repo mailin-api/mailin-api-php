@@ -163,7 +163,7 @@ class Mailin
         }
         public function send_bat_email($campid,$email_to)
         {
-                return $this->get("email/".$campid,json_encode(array("email_to"=>$email_to)));
+                return $this->post("campaign/".$campid."/test",json_encode(array("emails"=>$email_to)));
         }
         public function get_webhooks()
         {
