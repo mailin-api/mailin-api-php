@@ -117,6 +117,10 @@ class Mailin
         {
                 return $this->post("campaign/".$id."/recipients",json_encode(array("notify_url"=>$notify_url,"type"=>$type)));
         }
+        public function send_bat_email($campid,$email_to)
+        {
+                return $this->post("campaign/".$campid."/test",json_encode(array("emails"=>$email_to)));
+        }
         public function get_processes()
         {
                 return $this->get("process","");
@@ -160,10 +164,6 @@ class Mailin
         public function send_email($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$attachment,$headers)
         {
                 return $this->post("email",json_encode(array("cc"=>$cc,"text"=>$text,"bcc"=>$bcc,"replyto"=>$replyto,"html"=>$html,"to"=>$to,"attachment"=>$attachment,"from"=>$from,"subject"=>$subject,"headers"=>$headers)));
-        }
-        public function send_bat_email($campid,$email_to)
-        {
-                return $this->post("campaign/".$campid."/test",json_encode(array("emails"=>$email_to)));
         }
         public function get_webhooks()
         {

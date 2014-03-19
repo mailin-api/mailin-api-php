@@ -19,6 +19,7 @@ List of API calls that you can make, you can click to read more about it. Please
  * [update_campaign](https://apidocs.sendinblue.com/campaign/#4)($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to) - Update campaign information
  * [campaign_report_email](https://apidocs.sendinblue.com/campaign/#5)($id,$lang,$email_subject,$email_to,$email_content_type,$email_bcc,$email_cc,$email_body) - Sending reports to specific emails
  * [campaign_recipients_export](https://apidocs.sendinblue.com/campaign/#6)($id,$notify_url,$type) - Export recipients of a campaign
+ * [send_bat_email](https://apidocs.sendinblue.com/campaign/#7)($campid,$email_to) - Send a test Email (bat)
  * [get_folders](https://apidocs.sendinblue.com/folder/#1)() - Get list of all the folder details.
  * [get_folder](https://apidocs.sendinblue.com/folder/#2)($id) - Get all the folder details for folder with id <id>
  * [create_folder](https://apidocs.sendinblue.com/folder/#3)($name) - Create a folder
@@ -60,4 +61,7 @@ List of API calls that you can make, you can click to read more about it. Please
 
 ### SMS call
 
- * [send_sms](https://apidocs.sendinblue.com/sms/)($to,$from,$text,$web_url,$tag) - Sending a SMS
+ * [send_sms](https://apidocs.sendinblue.com/mailin-sms/#1)($to,$from,$text,$web_url,$tag) - Sending a SMS
+ * [create_sms_campaign](https://apidocs.sendinblue.com/mailin-sms/#2)($camp_name,$sender,$content,$bat_sent,$listids,$exclude_list,$scheduled_date) - Create a SMS campaign
+ * [update_sms_campaign](https://apidocs.sendinblue.com/mailin-sms/#3)($id,$camp_name,$sender,$content,$bat_sent,$listids,$exclude_list,$scheduled_date) - Update a SMS campaign
+ * [send_bat_sms](https://apidocs.sendinblue.com/mailin-sms/#4)($campid,$mobilephone) - Send a test SMS campaign
