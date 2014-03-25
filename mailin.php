@@ -151,7 +151,7 @@ class Mailin
         }
         public function display_list_users($listids,$page,$page_limit)
         {
-                return $this->get("list/display",json_encode(array("listids"=>$listids, "page"=>$page, "page_limit"=>$page_limit)));
+                return $this->post("list/display",json_encode(array("listids"=>$listids, "page"=>$page, "page_limit"=>$page_limit)));
         }
         public function add_users_list($id,$users)
         {
