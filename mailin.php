@@ -121,6 +121,22 @@ class Mailin
         {
                 return $this->post("campaign/".$campid."/test",json_encode(array("emails"=>$email_to)));
         }
+        public function create_trigger_campaign($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$recurring)
+        {
+                return $this->post("campaign",json_encode(array("category"=>$category,"from_name"=>$from_name,"trigger_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"exclude_list"=>$exclude_list,"recurring"=>$recurring)));
+        }
+        public function update_trigger_campaign($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$recurring)
+        {
+                return $this->put("campaign/".$id,json_encode(array("category"=>$category,"from_name"=>$from_name,"trigger_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"exclude_list"=>$exclude_list,"recurring"=>$recurring)));
+        }
+        public function create_template($from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status)
+        {
+                return $this->post("template",json_encode(array("from_name"=>$from_name,"template_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"status"=>$status)));
+        }
+        public function update_template($id,$from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status)
+        {
+                return $this->put("template/".$id,json_encode(array("from_name"=>$from_name,"template_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"status"=>$status)));
+        }
         public function get_processes()
         {
                 return $this->get("process","");
