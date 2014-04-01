@@ -129,14 +129,6 @@ class Mailin
         {
                 return $this->put("campaign/".$id,json_encode(array("category"=>$category,"from_name"=>$from_name,"trigger_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"exclude_list"=>$exclude_list,"recurring"=>$recurring)));
         }
-        public function create_template($from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status)
-        {
-                return $this->post("template",json_encode(array("from_name"=>$from_name,"template_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"status"=>$status)));
-        }
-        public function update_template($id,$from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status)
-        {
-                return $this->put("template/".$id,json_encode(array("from_name"=>$from_name,"template_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"status"=>$status)));
-        }
         public function get_processes()
         {
                 return $this->get("process","");
@@ -276,6 +268,14 @@ class Mailin
         public function send_transactional_template($id,$to,$cc,$bcc,$attr)
         {
                 return $this->put("template/".$id,json_encode(array("cc"=>$cc,"to"=>$to,"attr"=>$attr,"bcc"=>$bcc)));
+        }
+        public function create_template($from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status)
+        {
+                return $this->post("template",json_encode(array("from_name"=>$from_name,"template_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"status"=>$status)));
+        }
+        public function update_template($id,$from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status)
+        {
+                return $this->put("template/".$id,json_encode(array("from_name"=>$from_name,"template_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"status"=>$status)));
         }
 }
 ?>
