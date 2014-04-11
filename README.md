@@ -72,9 +72,8 @@ List of API calls that you can make, you can click to read more about it. Please
  * [create_attribute](https://apidocs.sendinblue.com/attribute/#3)($type,$data) - Creating attributes
  * [delete_attribute](https://apidocs.sendinblue.com/attribute/#4)($type,$data) - Deleting attributes of the given type
  * [get_user](https://apidocs.sendinblue.com/user/#2)($email) - Get information about a user/email
- * [create_user](https://apidocs.sendinblue.com/user/#1)($attributes,$blacklisted,$email,$listid) - Add a new user/email
+ * [create_update_user](https://apidocs.sendinblue.com/user/#1)($email,$attributes,$blacklisted,$listid,$listid_unlink) - Create/Update a new user information
  * [delete_user](https://apidocs.sendinblue.com/user/#4)($email) - Deleting user from db is not permitted but this action will unlink him from all lists
- * [update_user](https://apidocs.sendinblue.com/user/#3)($email,$attributes,$blacklisted,$listid,$listid_unlink) - Edit a user/email information
  * [import_users](https://apidocs.sendinblue.com/user/#5)($url,$listids,$notify_url,$name) - Import users/emails
  * [export_users](https://apidocs.sendinblue.com/user/#6)($export_attrib,$filter,$notify_url) - Export users/emails
  * [get_processes](https://apidocs.sendinblue.com/process/#1)() - Get information about all background processes
