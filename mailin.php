@@ -281,5 +281,21 @@ class Mailin
         {
                 return $this->put("template/".$id,json_encode(array("from_name"=>$from_name,"template_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"status"=>$status)));
         }
+        public function get_senders($option)
+        {
+                return $this->get("advanced",json_encode(array("option"=>$option)));
+        }
+        public function create_sender($sender_name,$sender_email,$ip_domain)
+        {
+                return $this->post("advanced",json_encode(array("name"=>$sender_name,"email"=>$sender_email,"ip_domain"=>$ip_domain)));
+        }
+        public function update_sender($id,$sender_name,$sender_email,$ip_domain)
+        {
+                return $this->put("advanced/".$id,json_encode(array("name"=>$sender_name,"email"=>$sender_email,"ip_domain"=>$ip_domain)));
+        }
+        public function delete_sender($id)
+        {
+                return $this->delete("advanced/".$id,"");
+        }
 }
 ?>
