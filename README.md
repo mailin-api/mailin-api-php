@@ -78,6 +78,10 @@ List of API calls that you can make, you can click to read more about it. Please
  * [export_users](https://apidocs.sendinblue.com/user/#6)($export_attrib,$filter,$notify_url) - Export users/emails
  * [get_processes](https://apidocs.sendinblue.com/process/#1)() - Get information about all background processes
  * [get_process](https://apidocs.sendinblue.com/process/#2)($id) - Get information about a specific process
+ * [get_senders](https://apidocs.sendinblue.com/sender-management/#1)($option) - Get information about all/specific senders
+ * [create_sender](https://apidocs.sendinblue.com/sender-management/#2)($sender_name,$sender_email,$ip_domain) - Create a sender
+ * [delete_sender](https://apidocs.sendinblue.com/sender-management/#3)($id) - Delete a sender
+ * [update_sender](https://apidocs.sendinblue.com/sender-management/#4)($id,$sender_name,$sender_email,$ip_domain) - Update a sender
 
 ### SMTP calls
 
