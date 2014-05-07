@@ -73,6 +73,10 @@ class Mailin
         {
                 return $this->get("account","");
         }
+        public function create_child_account($email,$password,$company_org,$first_name,$last_name,$credits)
+        {
+                return $this->post("account",json_encode(array("email"=>$email,"password"=>$password,"company_org"=>$company_org,"first_name"=>$first_name,"last_name"=>$last_name,"credits"=>$credits)));
+        }
         public function send_sms($to,$from,$text,$web_url,$tag)
         {
                 return $this->post("sms",json_encode(array("text"=>$text,"tag"=>$tag,"web_url"=>$web_url,"from"=>$from,"to"=>$to)));
