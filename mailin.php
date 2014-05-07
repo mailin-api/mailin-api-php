@@ -75,7 +75,7 @@ class Mailin
         }
         public function create_child_account($email,$password,$company_org,$first_name,$last_name,$credits)
         {
-                return $this->post("account",json_encode(array("email"=>$email,"password"=>$password,"company_org"=>$company_org,"first_name"=>$first_name,"last_name"=>$last_name,"credits"=>$credits)));
+                return $this->post("account",json_encode(array("child_email"=>$email,"password"=>$password,"company_org"=>$company_org,"first_name"=>$first_name,"last_name"=>$last_name,"credits"=>$credits)));
         }
         public function send_sms($to,$from,$text,$web_url,$tag)
         {
