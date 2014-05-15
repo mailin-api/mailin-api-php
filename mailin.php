@@ -137,6 +137,10 @@ class Mailin
         {
                 return $this->put("campaign/".$id,json_encode(array("category"=>$category,"from_name"=>$from_name,"trigger_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"exclude_list"=>$exclude_list,"recurring"=>$recurring)));
         }
+        public function campaign_share_link($campaign_ids)
+        {
+                return $this->post("campaign/sharelink",json_encode(array("camp_ids"=>$campaign_ids)));
+        }
         public function get_processes()
         {
                 return $this->get("process","");
