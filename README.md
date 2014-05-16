@@ -56,6 +56,7 @@ List of API calls that you can make, you can click to read more about it. Please
  * [send_bat_email](https://apidocs.sendinblue.com/campaign/#7)($campid,$email_to) - Send a test Email (bat)
  * [create_trigger_campaign](https://apidocs.sendinblue.com/campaign/#8)($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$recurring) - Create a trigger campaign
  * [update_trigger_campaign](https://apidocs.sendinblue.com/campaign/#9)($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$recurring) - Update trigger campaign information
+ * [campaign_share_link](https://apidocs.sendinblue.com/campaign/#10)($campaign_ids) - Get campaign share link
  * [get_folders](https://apidocs.sendinblue.com/folder/#1)() - Get list of all the folder details.
  * [get_folder](https://apidocs.sendinblue.com/folder/#2)($id) - Get all the folder details for folder with id <id>
  * [create_folder](https://apidocs.sendinblue.com/folder/#3)($name) - Create a folder
