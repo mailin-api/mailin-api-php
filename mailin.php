@@ -81,9 +81,9 @@ class Mailin
         {
                 return $this->delete("account/".$child_authkey,"");
         }
-        public function send_sms($to,$from,$text,$web_url,$tag)
+        public function send_sms($to,$from,$text,$web_url,$tag,$type)
         {
-                return $this->post("sms",json_encode(array("text"=>$text,"tag"=>$tag,"web_url"=>$web_url,"from"=>$from,"to"=>$to)));
+                return $this->post("sms",json_encode(array("text"=>$text,"tag"=>$tag,"web_url"=>$web_url,"from"=>$from,"to"=>$to,"type"=>$type)));
         }
         public function create_sms_campaign($camp_name,$sender,$content,$bat_sent,$listids,$exclude_list,$scheduled_date)
         {

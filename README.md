@@ -103,7 +103,7 @@ List of API calls that you can make, you can click to read more about it. Please
 
 ### SMS call
 
- * [send_sms](https://apidocs.sendinblue.com/mailin-sms/#1)($to,$from,$text,$web_url,$tag) - Sending a SMS
+ * [send_sms](https://apidocs.sendinblue.com/mailin-sms/#1)($to,$from,$text,$web_url,$tag,$type) - Sending a SMS
  * [create_sms_campaign](https://apidocs.sendinblue.com/mailin-sms/#2)($camp_name,$sender,$content,$bat_sent,$listids,$exclude_list,$scheduled_date) - Create a SMS campaign
  * [update_sms_campaign](https://apidocs.sendinblue.com/mailin-sms/#3)($id,$camp_name,$sender,$content,$bat_sent,$listids,$exclude_list,$scheduled_date) - Update a SMS campaign
  * [send_bat_sms](https://apidocs.sendinblue.com/mailin-sms/#4)($campid,$mobilephone) - Send a test SMS campaign
