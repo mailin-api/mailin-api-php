@@ -81,6 +81,10 @@ class Mailin
         {
                 return $this->delete("account/".$child_authkey,"");
         }
+        public function get_child_account($child_authkey)
+        {
+                return $this->get("account",json_encode(array("auth_key"=>$child_authkey)));
+        }
         public function send_sms($to,$from,$text,$web_url,$tag,$type)
         {
                 return $this->post("sms",json_encode(array("text"=>$text,"tag"=>$tag,"web_url"=>$web_url,"from"=>$from,"to"=>$to,"type"=>$type)));
