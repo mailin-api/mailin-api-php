@@ -85,6 +85,10 @@ class Mailin
         {
                 return $this->get("account",json_encode(array("auth_key"=>$child_authkey)));
         }
+        public function add_remove_child_credits($child_authkey,$add_credits,$remove_credits)
+        {
+                return $this->post("account/addrmvcredit",json_encode(array("auth_key"=>$child_authkey,"add_credit"=>$add_credits,"rmv_credit"=>$remove_credits)));
+        }
         public function send_sms($to,$from,$text,$web_url,$tag,$type)
         {
                 return $this->post("sms",json_encode(array("text"=>$text,"tag"=>$tag,"web_url"=>$web_url,"from"=>$from,"to"=>$to,"type"=>$type)));
