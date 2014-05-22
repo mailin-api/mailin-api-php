@@ -11,11 +11,12 @@ List of API calls that you can make, you can click to read more about it. Please
 
 ### Campaign calls
 
- * [get_account](https://apidocs.sendinblue.com/account/)() - Get your account information
+ * [get_account](https://apidocs.sendinblue.com/account/#1)() - Get your account information
  * [create_child_account](https://apidocs.sendinblue.com/account/#2)($email,$password,$company_org,$first_name,$last_name,$credits) - Create a Reseller child account
- * [delete_child_account](https://apidocs.sendinblue.com/account/#3)($child_authkey) - Delete a Reseller child account
- * [get_child_account](https://apidocs.sendinblue.com/account/#4)($child_authkey) - Get Reseller child accounts
- * [add_remove_child_credits](https://apidocs.sendinblue.com/account/#5)($childauthkey,$add_credits,$remove_credits) - Add/Remove Reseller child credits
+ * [update_child_account](https://apidocs.sendinblue.com/account/#3)($child_authkey,$company_org,$first_name,$last_name,$password) - Update a Reseller child account
+ * [delete_child_account](https://apidocs.sendinblue.com/account/#4)($child_authkey) - Delete a Reseller child account
+ * [get_child_account](https://apidocs.sendinblue.com/account/#5)($child_authkey) - Get Reseller child accounts
+ * [add_remove_child_credits](https://apidocs.sendinblue.com/account/#6)($childauthkey,$add_credits,$remove_credits) - Add/Remove Reseller child credits
  * [get_campaigns](https://apidocs.sendinblue.com/campaign/#1)($type) - Get list of all campaigns or of specific type: "classic", "trigger", "sms"
  * [get_campaign](https://apidocs.sendinblue.com/campaign/#1)($id) - Get specific campaign object
  * [create_campaign](https://apidocs.sendinblue.com/campaign/#2)($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list) - Create a campaign
