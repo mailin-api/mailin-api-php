@@ -77,6 +77,10 @@ class Mailin
         {
                 return $this->post("account",json_encode(array("child_email"=>$email,"password"=>$password,"company_org"=>$company_org,"first_name"=>$first_name,"last_name"=>$last_name,"credits"=>$credits)));
         }
+        public function update_child_account($child_authkey,$company_org,$first_name,$last_name,$password)
+        {
+                return $this->put("account",json_encode(array("auth_key"=>$child_authkey,"company_org"=>$company_org,"first_name"=>$first_name,"last_name"=>$last_name,"password"=>$password)));
+        }
         public function delete_child_account($child_authkey)
         {
                 return $this->delete("account/".$child_authkey,"");
