@@ -87,7 +87,7 @@ class Mailin
         }
         public function get_child_account($child_authkey)
         {
-                return $this->get("account/getchild",json_encode(array("auth_key"=>$child_authkey)));
+                return $this->post("account/getchild",json_encode(array("auth_key"=>$child_authkey)));
         }
         public function add_remove_child_credits($child_authkey,$add_credits,$remove_credits)
         {
