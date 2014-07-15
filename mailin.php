@@ -153,6 +153,10 @@ class Mailin
         {
                 return $this->post("campaign/sharelink",json_encode(array("camp_ids"=>$campaign_ids)));
         }
+        public function update_campaign_status($id,$status)
+        {
+                return $this->put("campaign/".$id."/updatecampstatus",json_encode(array("status"=>$status)));
+        }
         public function get_processes()
         {
                 return $this->get("process","");
