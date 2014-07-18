@@ -109,9 +109,9 @@ class Mailin
         {
                 return $this->get("sms/".$campid,json_encode(array("to"=>$mobilephone)));
         }
-        public function get_campaigns($type)
+        public function get_campaigns($type,$status,$page,$page_limit)
         {
-                return $this->get("campaign",json_encode(array("type"=>$type)));
+                return $this->get("campaign",json_encode(array("type"=>$type,"status"=>$status,"page"=>$page,"page_limit"=>$page_limit)));
         }
         public function get_campaign($id)
         {
