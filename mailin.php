@@ -249,9 +249,9 @@ class Mailin
         {
                 return $this->post("user/export",json_encode(array("export_attrib"=>$export_attrib,"filter"=>$filter,"notify_url"=>$notify_url)));
         }
-        public function create_update_user($email,$attributes,$blacklisted,$listid,$listid_unlink)
+        public function create_update_user($email,$attributes,$blacklisted,$listid,$listid_unlink,$blacklisted_sms)
         {
-            return $this->post("user/createdituser",json_encode(array("email"=>$email,"attributes"=>$attributes,"blacklisted"=>$blacklisted,"listid"=>$listid,"listid_unlink"=>$listid_unlink)));
+            return $this->post("user/createdituser",json_encode(array("email"=>$email,"attributes"=>$attributes,"blacklisted"=>$blacklisted,"listid"=>$listid,"listid_unlink"=>$listid_unlink,"blacklisted_sms"=>$blacklisted_sms)));
         }
         public function get_attributes()
         {
