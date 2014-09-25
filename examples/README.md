@@ -12,6 +12,7 @@ List of API calls that you can make, you can click to read more about it. Please
 ### Campaign calls
 
  * [get_account](https://apidocs.sendinblue.com/account/#1)() - Get your account information
+ * [get_smtp_details](https://apidocs.sendinblue.com/account/#7)() - Get your SMTP account information
  * [create_child_account](https://apidocs.sendinblue.com/account/#2)($email,$password,$company_org,$first_name,$last_name,$credits) - Create a Reseller child account
  * [update_child_account](https://apidocs.sendinblue.com/account/#3)($child_authkey,$company_org,$first_name,$last_name,$password) - Update a Reseller child account
  * [delete_child_account](https://apidocs.sendinblue.com/account/#4)($child_authkey) - Delete a Reseller child account
