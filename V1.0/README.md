@@ -1,6 +1,6 @@
 # Sendinblue PHP library
 
-This is the Sendinblue PHP library.It implements the various exposed APIs that you can read more about on https://apidocs.sendinblue.com.
+This is the Sendinblue PHP library. It implements the various exposed APIs that you can read more about on https://apidocs.sendinblue.com.
 
 
 ## Quickstart
@@ -39,7 +39,7 @@ var_dump($mailin->send_email($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$a
 
 ## Available functions
 
-List of API calls that you can make, you can click to read more about it. Please do note that the order of parameters are important.
+List of API calls that you can make. Please do note that the order of parameters are important.
 
 ### Campaign calls
 

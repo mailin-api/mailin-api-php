@@ -1,6 +1,6 @@
 # Sendinblue PHP library
 
-This is the Sendinblue PHP library.It implements the various exposed APIs that you can read more about on https://apidocs.sendinblue.com.
+This is the Sendinblue PHP library. It implements the various exposed APIs that you can read more about on https://apidocs.sendinblue.com.
 
 
 ## Quickstart
@@ -81,9 +81,9 @@ List of API calls that you can make, you can click to read more about it. Please
  * [delete_attribute](https://apidocs.sendinblue.com/attribute/#4)($type,$data) - Deleting attributes of the given type
  * [get_user](https://apidocs.sendinblue.com/user/#2)($email) - Get information about a user/email
  * [create_update_user](https://apidocs.sendinblue.com/user/#1)($email,$attributes,$blacklisted,$listid,$listid_unlink,$blacklisted_sms) - Create/Update a user information
- * [delete_user](https://apidocs.sendinblue.com/user/#4)($email) - Deleting user from db is not permitted but this action will unlink him from all lists
- * [import_users](https://apidocs.sendinblue.com/user/#5)($url,$listids,$notify_url,$name) - Import users/emails
- * [export_users](https://apidocs.sendinblue.com/user/#6)($export_attrib,$filter,$notify_url) - Export users/emails
+ * [delete_user](https://apidocs.sendinblue.com/user/#3)($email) - Deleting user from db is not permitted but this action will unlink him from all lists
+ * [import_users](https://apidocs.sendinblue.com/user/#4)($url,$listids,$notify_url,$name) - Import users/emails
+ * [export_users](https://apidocs.sendinblue.com/user/#5)($export_attrib,$filter,$notify_url) - Export users/emails
  * [get_processes](https://apidocs.sendinblue.com/process/#1)() - Get information about all background processes
  * [get_process](https://apidocs.sendinblue.com/process/#2)($id) - Get information about a specific process
  * [get_senders](https://apidocs.sendinblue.com/sender-management/#1)($option) - Get information about all/specific senders
