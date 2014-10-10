@@ -1,6 +1,6 @@
 <?php
 
-require('mailin.php');
+require('../mailin.php');
 /*
  * This will initiate the API with the endpoint and your access and secret key.
  *
