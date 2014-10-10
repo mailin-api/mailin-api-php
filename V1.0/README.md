@@ -1,6 +1,6 @@
-# Sendinblue PHP library
+# Sendinblue Php Library
 
-This is the Sendinblue PHP library. It implements the various exposed APIs that you can read more about on https://apidocs.sendinblue.com.
+This is the Sendinblue Php library. It implements the various exposed APIs that you can read more about on https://apidocs.sendinblue.com.
 
 
 ## Quickstart
