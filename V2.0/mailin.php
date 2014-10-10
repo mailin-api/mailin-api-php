@@ -24,11 +24,12 @@ class Mailin
         $called_url = $this->base_url."/".$resource;
         $ch = curl_init($called_url);
         $auth_header = 'api-key:'.$this->api_key;
+        $content_header = "Content-Type:application/json";
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             // Windows only over-ride
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         }
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array($auth_header));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array($auth_header,$content_header));
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
