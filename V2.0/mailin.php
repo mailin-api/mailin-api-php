@@ -79,9 +79,9 @@ class Mailin
         {
                 return $this->delete("account/".$child_authkey,"");
         }
-        public function get_child_account($child_authkey)
+        public function get_reseller_child($child_authkey)
         {
-                return $this->post("account/getchild",json_encode(array("auth_key"=>$child_authkey)));
+                return $this->post("account/getchildv2",json_encode(array("auth_key"=>$child_authkey)));
         }
         public function add_remove_child_credits($child_authkey,$add_credits,$remove_credits)
         {
@@ -103,13 +103,13 @@ class Mailin
         {
                 return $this->get("sms/".$campid,json_encode(array("to"=>$mobilephone)));
         }
-        public function get_campaigns($type,$status,$page,$page_limit)
+        public function get_campaigns_v2($type,$status,$page,$page_limit)
         {
-                return $this->get("campaign",json_encode(array("type"=>$type,"status"=>$status,"page"=>$page,"page_limit"=>$page_limit)));
+                return $this->get("campaign/detailsv2",json_encode(array("type"=>$type,"status"=>$status,"page"=>$page,"page_limit"=>$page_limit)));
         }
-        public function get_campaign($id)
+        public function get_campaign_v2($id)
         {
-                return $this->get("campaign/".$id,"");
+                return $this->get("campaign/".$id."/detailsv2","");
         }
         public function create_campaign($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list)
         {
@@ -143,9 +143,9 @@ class Mailin
         {
                 return $this->put("campaign/".$id,json_encode(array("category"=>$category,"from_name"=>$from_name,"trigger_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"exclude_list"=>$exclude_list,"recurring"=>$recurring)));
         }
-        public function campaign_share_link($campaign_ids)
+        public function share_campaign($campaign_ids)
         {
-                return $this->post("campaign/sharelink",json_encode(array("camp_ids"=>$campaign_ids)));
+                return $this->post("campaign/sharelinkv2",json_encode(array("camp_ids"=>$campaign_ids)));
         }
         public function update_campaign_status($id,$status)
         {
