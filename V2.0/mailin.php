@@ -151,17 +151,17 @@ class Mailin
         {
                 return $this->put("campaign/".$id."/updatecampstatus",json_encode(array("status"=>$status)));
         }
-        public function get_processes()
+        public function get_processes($page,$page_limit)
         {
-                return $this->get("process","");
+                return $this->get("process",json_encode(array("page"=>$page,"page_limit"=>$page_limit)));
         }
         public function get_process($id)
         {
                 return $this->get("process/".$id,"");
         }
-        public function get_lists()
+        public function get_lists($page,$page_limit)
         {
-                return $this->get("list","");
+                return $this->get("list",json_encode(array("page"=>$page,"page_limit"=>$page_limit)));
         }
         public function get_list($id)
         {
@@ -267,9 +267,9 @@ class Mailin
         {
                 return $this->post("report",json_encode(array("limit"=>$limit,"start_date"=>$start_date,"end_date"=>$end_date,"offset"=>$offset,"date"=>$date,"days"=>$days,"email"=>$email)));
         }
-        public function get_folders()
+        public function get_folders($page,$page_limit)
         {
-                return $this->get("folder","");
+                return $this->get("folder",json_encode(array("page"=>$page,"page_limit"=>$page_limit)));
         }
         public function get_folder($id)
         {
