@@ -63,9 +63,9 @@ List of API calls that you can make, you can click to read more about it. Please
 
  * [get_report](https://apidocs.sendinblue.com/report/)($limit,$start_date,$end_date,$offset,$date,$days,$email) - Retrieve information for all report events
  * [get_statistics](https://apidocs.sendinblue.com/statistics/)($aggregate,$tag,$days,$end_date,$start_date) - Get aggregate statistics about emails sent
- * [get_webhooks](https://apidocs.sendinblue.com/webhooks/#1)() - List registered webhooks
+ * [get_webhooks](https://apidocs.sendinblue.com/webhooks/#1)($is_plat) - Get list of all registered webhooks or of specific type
  * [get_webhook](https://apidocs.sendinblue.com/webhooks/#2)($id) - Get information about a webhook
- * [create_webhook](https://apidocs.sendinblue.com/webhooks/#3)($url,$description,$events) - Registering a webhook
+ * [create_webhook](https://apidocs.sendinblue.com/webhooks/#3)($url,$description,$events,$is_plat) - Registering a webhook
  * [delete_webhook](https://apidocs.sendinblue.com/webhooks/#5)($id) - Deleting a webhook
  * [update_webhook](https://apidocs.sendinblue.com/webhooks/#4)($id,$url,$description,$events) - Editing a webhook
  * [delete_bounces](https://apidocs.sendinblue.com/bounces/)($start_date,$end_date,$email) - Deleting bounces

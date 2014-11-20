@@ -195,17 +195,17 @@ class Mailin
         {
                 return $this->post("email",json_encode(array("cc"=>$cc,"text"=>$text,"bcc"=>$bcc,"replyto"=>$replyto,"html"=>$html,"to"=>$to,"attachment"=>$attachment,"from"=>$from,"subject"=>$subject,"headers"=>$headers)));
         }
-        public function get_webhooks()
+        public function get_webhooks($is_plat)
         {
-                return $this->get("webhook","");
+                return $this->get("webhook",json_encode(array("is_plat"=>$is_plat)));
         }
         public function get_webhook($id)
         {
                 return $this->get("webhook/".$id,"");
         }
-        public function create_webhook($url,$description,$events)
+        public function create_webhook($url,$description,$events,$is_plat)
         {
-                return $this->post("webhook",json_encode(array("url"=>$url,"description"=>$description,"events"=>$events)));
+                return $this->post("webhook",json_encode(array("url"=>$url,"description"=>$description,"events"=>$events,"is_plat"=>$is_plat)));
         }
         public function delete_webhook($id)
         {
