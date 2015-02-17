@@ -20,14 +20,14 @@ List of API calls that you can make, you can click to read more about it. Please
  * [add_remove_child_credits](https://apidocs.sendinblue.com/account/#6)($childauthkey,$add_credits,$remove_credits) - Add/Remove Reseller child credits
  * [get_campaigns_v2](https://apidocs.sendinblue.com/campaign/#1)($type,$status,$page,$page_limit) - Get list of all campaigns or of specific type or status or both
  * [get_campaign_v2](https://apidocs.sendinblue.com/campaign/#1)($id) - Get specific campaign object
- * [create_campaign](https://apidocs.sendinblue.com/campaign/#2)($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list) - Create a campaign
+ * [create_campaign](https://apidocs.sendinblue.com/campaign/#2)($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$attachmentUrl,$inline_image) - Create a campaign
  * [delete_campaign](https://apidocs.sendinblue.com/campaign/#3)($id) - Delete a campaign
- * [update_campaign](https://apidocs.sendinblue.com/campaign/#4)($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list) - Update campaign information
+ * [update_campaign](https://apidocs.sendinblue.com/campaign/#4)($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$attachmentUrl,$inline_image) - Update campaign information
  * [campaign_report_email](https://apidocs.sendinblue.com/campaign/#5)($id,$lang,$email_subject,$email_to,$email_content_type,$email_bcc,$email_cc,$email_body) - Sending reports to specific emails
  * [campaign_recipients_export](https://apidocs.sendinblue.com/campaign/#6)($id,$notify_url,$type) - Export recipients of a campaign
  * [send_bat_email](https://apidocs.sendinblue.com/campaign/#7)($campid,$email_to) - Send a test Email (bat)
- * [create_trigger_campaign](https://apidocs.sendinblue.com/campaign/#8)($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$recurring) - Create a trigger campaign
- * [update_trigger_campaign](https://apidocs.sendinblue.com/campaign/#9)($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$recurring) - Update trigger campaign information
+ * [create_trigger_campaign](https://apidocs.sendinblue.com/campaign/#8)($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$recurring,$attachmentUrl,$inline_image) - Create a trigger campaign
+ * [update_trigger_campaign](https://apidocs.sendinblue.com/campaign/#9)($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$recurring,$attachmentUrl,$inline_image) - Update trigger campaign information
  * [share_campaign](https://apidocs.sendinblue.com/campaign/#10)($campaign_ids) - Get campaign share link
  * [update_campaign_status](https://apidocs.sendinblue.com/campaign/#11)($id,$status) - Modify a campaign status
  * [get_folders](https://apidocs.sendinblue.com/folder/#1)($page,$page_limit) - Get list of all the folder details.
@@ -49,16 +49,16 @@ List of API calls that you can make, you can click to read more about it. Please
  * [delete_attribute](https://apidocs.sendinblue.com/attribute/#4)($type,$data) - Deleting attributes of the given type
  * [get_user](https://apidocs.sendinblue.com/user/#2)($email) - Get information about a user/email
  * [create_update_user](https://apidocs.sendinblue.com/user/#1)($email,$attributes,$blacklisted,$listid,$listid_unlink,$blacklisted_sms) - Create/Update a user information
- * [delete_user](https://apidocs.sendinblue.com/user/#4)($email) - Deleting user from db is not permitted but this action will unlink him from all lists
- * [import_users](https://apidocs.sendinblue.com/user/#5)($url,$listids,$notify_url,$name) - Import users/emails
- * [export_users](https://apidocs.sendinblue.com/user/#6)($export_attrib,$filter,$notify_url) - Export users/emails
+ * [delete_user](https://apidocs.sendinblue.com/user/#3)($email) - Deleting user from db is not permitted but this action will unlink him from all lists
+ * [import_users](https://apidocs.sendinblue.com/user/#4)($url,$listids,$notify_url,$name) - Import users/emails
+ * [export_users](https://apidocs.sendinblue.com/user/#5)($export_attrib,$filter,$notify_url) - Export users/emails
  * [get_processes](https://apidocs.sendinblue.com/process/#1)($page,$page_limit) - Get information about all background processes
  * [get_process](https://apidocs.sendinblue.com/process/#2)($id) - Get information about a specific process
  * [get_senders](https://apidocs.sendinblue.com/sender-management/#1)($option) - Get information about all/specific senders
  * [create_sender](https://apidocs.sendinblue.com/sender-management/#2)($sender_name,$sender_email,$ip_domain) - Create a sender
  * [delete_sender](https://apidocs.sendinblue.com/sender-management/#3)($id) - Delete a sender
  * [update_sender](https://apidocs.sendinblue.com/sender-management/#4)($id,$sender_name,$sender_email,$ip_domain) - Update a sender
- 
+
 ### SMTP calls
 
  * [get_report](https://apidocs.sendinblue.com/report/)($limit,$start_date,$end_date,$offset,$date,$days,$email) - Retrieve information for all report events
@@ -70,9 +70,9 @@ List of API calls that you can make, you can click to read more about it. Please
  * [update_webhook](https://apidocs.sendinblue.com/webhooks/#4)($id,$url,$description,$events) - Editing a webhook
  * [delete_bounces](https://apidocs.sendinblue.com/bounces/)($start_date,$end_date,$email) - Deleting bounces
  * [send_email](https://apidocs.sendinblue.com/tutorial-sending-transactional-email/)($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$attachment,$headers) - Sending out a transactional email
- * [send_transactional_template](https://apidocs.sendinblue.com/template/)($id,$to,$cc,$bcc,$attr) - Send templates created on Sendinblue, through Sendinblue smtp.
- * [create_template](https://apidocs.sendinblue.com/template/#2)($from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status) - Create a template 
- * [update_template](https://apidocs.sendinblue.com/template/#3)($id,$from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status) - Update template information
+ * [send_transactional_template](https://apidocs.sendinblue.com/template/)($id,$to,$cc,$bcc,$attr,$attachmentUrl,$attachment) - Send templates created on Sendinblue, through Sendinblue smtp.
+ * [create_template](https://apidocs.sendinblue.com/template/#2)($from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status,$attach) - Create a template 
+ * [update_template](https://apidocs.sendinblue.com/template/#3)($id,$from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status,$attach) - Update template information
 
 ### SMS call
 

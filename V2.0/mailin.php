@@ -111,17 +111,17 @@ class Mailin
         {
                 return $this->get("campaign/".$id."/detailsv2","");
         }
-        public function create_campaign($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list)
+        public function create_campaign($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$attachmentUrl,$inline_image)
         {
-                return $this->post("campaign",json_encode(array("category"=>$category,"from_name"=>$from_name,"name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,'exclude_list'=>$exclude_list)));
+                return $this->post("campaign",json_encode(array("category"=>$category,"from_name"=>$from_name,"name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"exclude_list"=>$exclude_list,"attachment_url"=>$attachmentUrl,"inline_image"=>$inline_image)));
         }
         public function delete_campaign($id)
         {
                 return $this->delete("campaign/".$id,"");
         }
-        public function update_campaign($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list)
+        public function update_campaign($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$attachmentUrl,$inline_image)
         {
-                return $this->put("campaign/".$id,json_encode(array("category"=>$category,"from_name"=>$from_name,"name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,'exclude_list'=>$exclude_list)));
+                return $this->put("campaign/".$id,json_encode(array("category"=>$category,"from_name"=>$from_name,"name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"exclude_list"=>$exclude_list,"attachment_url"=>$attachmentUrl,"inline_image"=>$inline_image)));
         }
         public function campaign_report_email($id,$lang,$email_subject,$email_to,$email_content_type,$email_bcc,$email_cc,$email_body)
         {
@@ -135,13 +135,13 @@ class Mailin
         {
                 return $this->post("campaign/".$campid."/test",json_encode(array("emails"=>$email_to)));
         }
-        public function create_trigger_campaign($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$recurring)
+        public function create_trigger_campaign($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$recurring,$attachmentUrl,$inline_image)
         {
-                return $this->post("campaign",json_encode(array("category"=>$category,"from_name"=>$from_name,"trigger_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"exclude_list"=>$exclude_list,"recurring"=>$recurring)));
+                return $this->post("campaign",json_encode(array("category"=>$category,"from_name"=>$from_name,"trigger_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"exclude_list"=>$exclude_list,"recurring"=>$recurring,"attachment_url"=>$attachmentUrl,"inline_image"=>$inline_image)));
         }
-        public function update_trigger_campaign($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$recurring)
+        public function update_trigger_campaign($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$recurring,$attachmentUrl,$inline_image)
         {
-                return $this->put("campaign/".$id,json_encode(array("category"=>$category,"from_name"=>$from_name,"trigger_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"exclude_list"=>$exclude_list,"recurring"=>$recurring)));
+                return $this->put("campaign/".$id,json_encode(array("category"=>$category,"from_name"=>$from_name,"trigger_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"listid"=>$listid,"scheduled_date"=>$scheduled_date,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"exclude_list"=>$exclude_list,"recurring"=>$recurring,"attachment_url"=>$attachmentUrl,"inline_image"=>$inline_image)));
         }
         public function share_campaign($campaign_ids)
         {
@@ -291,17 +291,17 @@ class Mailin
         {
                 return $this->post("bounces",json_encode(array("start_date"=>$start_date,"end_date"=>$end_date,"email"=>$email)));
         }
-        public function send_transactional_template($id,$to,$cc,$bcc,$attr)
+        public function send_transactional_template($id,$to,$cc,$bcc,$attr,$attachmentUrl,$attachment)
         {
-                return $this->put("template/".$id,json_encode(array("cc"=>$cc,"to"=>$to,"attr"=>$attr,"bcc"=>$bcc)));
+                return $this->put("template/".$id,json_encode(array("cc"=>$cc,"to"=>$to,"attr"=>$attr,"bcc"=>$bcc,"attachment_url"=>$attachmentUrl,"attachment"=>$attachment)));
         }
-        public function create_template($from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status)
+        public function create_template($from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status,$attach)
         {
-                return $this->post("template",json_encode(array("from_name"=>$from_name,"template_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"status"=>$status)));
+                return $this->post("template",json_encode(array("from_name"=>$from_name,"template_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"status"=>$status,"attachment"=>$attach)));
         }
-        public function update_template($id,$from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status)
+        public function update_template($id,$from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status,$attach)
         {
-                return $this->put("template/".$id,json_encode(array("from_name"=>$from_name,"template_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"status"=>$status)));
+                return $this->put("template/".$id,json_encode(array("from_name"=>$from_name,"template_name"=>$name,"bat"=>$bat_sent,"html_content"=>$html_content,"html_url"=>$html_url,"subject"=>$subject,"from_email"=>$from_email,"reply_to"=>$reply_to,"to_field"=>$to_field,"status"=>$status,"attachment"=>$attach)));
         }
         public function get_senders($option)
         {

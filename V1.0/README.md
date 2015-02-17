@@ -52,14 +52,14 @@ List of API calls that you can make. Please do note that the order of parameters
  * add_remove_child_credits($childauthkey,$add_credits,$remove_credits) - Add/Remove Reseller child credits
  * get_campaigns($type,$status,$page,$page_limit) - Get list of all campaigns or of specific type or status or both
  * get_campaign($id) - Get specific campaign object
- * create_campaign($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list) - Create a campaign
+ * create_campaign($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$attachmentUrl,$inline_image) - Create a campaign
  * delete_campaign($id) - Delete a campaign
- * update_campaign($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list) - Update campaign information
+ * update_campaign($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$attachmentUrl,$inline_image) - Update campaign information
  * campaign_report_email($id,$lang,$email_subject,$email_to,$email_content_type,$email_bcc,$email_cc,$email_body) - Sending reports to specific emails
  * campaign_recipients_export($id,$notify_url,$type) - Export recipients of a campaign
  * send_bat_email($campid,$email_to) - Send a test Email (bat)
- * create_trigger_campaign($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$recurring) - Create a trigger campaign
- * update_trigger_campaign($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$recurring) - Update trigger campaign information
+ * create_trigger_campaign($category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$recurring,$attachmentUrl,$inline_image) - Create a trigger campaign
+ * update_trigger_campaign($id,$category,$from_name,$name,$bat_sent,$html_content,$html_url,$listid,$scheduled_date,$subject,$from_email,$reply_to,$to_field,$exclude_list,$recurring,$attachmentUrl,$inline_image) - Update trigger campaign information
  * campaign_share_link($campaign_ids) - Get campaign share link
  * update_campaign_status($id,$status) - Modify a campaign status
  * get_folders() - Get list of all the folder details.
@@ -102,9 +102,9 @@ List of API calls that you can make. Please do note that the order of parameters
  * update_webhook($id,$url,$description,$events) - Editing a webhook
  * delete_bounces($start_date,$end_date,$email) - Deleting bounces
  * send_email($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$attachment,$headers) - Sending out a transactional email
- * send_transactional_template($id,$to,$cc,$bcc,$attr) - Send templates created on Sendinblue, through Sendinblue smtp.
- * create_template($from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status) - Create a template 
- * update_template($id,$from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status) - Update template information
+ * send_transactional_template($id,$to,$cc,$bcc,$attr,$attachmentUrl,$attachment) - Send templates created on Sendinblue, through Sendinblue smtp.
+ * create_template($from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status,$attach) - Create a template 
+ * update_template($id,$from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status,$attach) - Update template information
 
 ### SMS call
 
