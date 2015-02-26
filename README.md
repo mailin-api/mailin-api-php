@@ -22,8 +22,6 @@ The following guides give you a start and understanding of how to use our API.
 
 Be sure to visit the SendinBlue official [documentation website](https://apidocs.sendinblue.com) for additional information about our API.
 
-We also support [Composer](https://packagist.org/packages/mailin-api/mailin-api-php)
-
 If you find a bug, please submit the issue in [Github directly](https://github.com/mailin-api/mailin-api-php/issues). 
 
 As always, if you need additional assistance, drop us a note [here](https://apidocs.sendinblue.com/support/).
