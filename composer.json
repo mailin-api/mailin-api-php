@@ -1,0 +1,20 @@
+{
+    "name": "mailin-api/mailin-api-php",
+    "description": "Official SendinBlue provided API V2 wrapper",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "psr-0": { "mailin-api": "V2.0/" }
+    },
+    "homepage": "https://github.com/mailin-api/mailin-api-php",
+    "authors": [ 
+        {
+            "name": "SendinBlue",
+            "homepage": "https://www.sendinblue.com/"
+
+        }
+    ]
+
+}
