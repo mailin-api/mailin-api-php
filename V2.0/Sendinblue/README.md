@@ -1,13 +1,26 @@
-# Sendinblue Php Library
+# SendinBlue Php Library
 
-This is the Sendinblue Php library. It implements the various exposed APIs that you can read more about on https://apidocs.sendinblue.com.
+This is the SendinBlue Php library. It implements the various exposed APIs that you can read more about on https://apidocs.sendinblue.com.
 
 
-## Quickstart
+## Installation and Quickstart
 
- * You will need to first get the Access key from [Sendinblue](https://www.sendinblue.com).
+ * You will need to first get the Access key from [SendinBlue](https://www.sendinblue.com).
 
- * Assuming that you have cloned this git repo, or downloaded mailin.php and its in the same directory than the script. You can use this small sample script to get started
+ * You can install the SendinBlue API using [Composer](https://packagist.org/packages/mailin-api/mailin-api-php). Just add the following to your composer.json:
+
+    {
+        "require": {
+            "mailin-api/mailin-api-php": "dev-master"
+        }
+    }
+
+   You will then need to:
+ * Run ``composer install`` to get these dependencies added to your vendor directory
+ * Add the autoloader to your application with this line: ``require("vendor/autoload.php")``
+
+Alternatively you can just download the Mailin.php file and include it manually.
+You can use below sample script to get started
 
 ```PHP
 <?php
@@ -35,7 +48,7 @@ var_dump($mailin->send_email($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$a
 ?>
 ```
 
- * To explore more, you should visit the [Sendinblue API documentation](https://apidocs.sendinblue.com).
+ * To explore more, you should visit the [SendinBlue API documentation](https://apidocs.sendinblue.com).
 
 ## Available functions
 
@@ -102,7 +115,7 @@ List of API calls that you can make, you can click to read more about it. Please
  * [update_webhook](https://apidocs.sendinblue.com/webhooks/#4)($id,$url,$description,$events) - Editing a webhook
  * [delete_bounces](https://apidocs.sendinblue.com/bounces/)($start_date,$end_date,$email) - Deleting bounces
  * [send_email](https://apidocs.sendinblue.com/tutorial-sending-transactional-email/)($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$attachment,$headers) - Sending out a transactional email
- * [send_transactional_template](https://apidocs.sendinblue.com/template/)($id,$to,$cc,$bcc,$attr,$attachmentUrl,$attachment) - Send templates created on Sendinblue, through Sendinblue smtp.
+ * [send_transactional_template](https://apidocs.sendinblue.com/template/)($id,$to,$cc,$bcc,$attr,$attachmentUrl,$attachment) - Send templates created on SendinBlue, through SendinBlue smtp.
  * [create_template](https://apidocs.sendinblue.com/template/#2)($from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status,$attach) - Create a template 
  * [update_template](https://apidocs.sendinblue.com/template/#3)($id,$from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status,$attach) - Update template information
 

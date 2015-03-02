@@ -1,11 +1,11 @@
-# Sendinblue Php Library
+# SendinBlue Php Library
 
-This is the Sendinblue Php library. It implements the various exposed APIs that you can read more about on https://apidocs.sendinblue.com.
+This is the SendinBlue Php library. It implements the various exposed APIs that you can read more about on https://apidocs.sendinblue.com.
 
 
 ## Quickstart
 
- * You will need to first get the Access key and Secret key from [Sendinblue](https://www.sendinblue.com).
+ * You will need to first get the Access key and Secret key from [SendinBlue](https://www.sendinblue.com).
 
  * Assuming that you have cloned this git repo, or downloaded mailin.php and its in the same directory than the script. You can use this small sample script to get started
 
@@ -35,7 +35,7 @@ var_dump($mailin->send_email($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$a
 ?>
 ```
 
- * To explore more, you should visit the [Sendinblue API documentation](https://apidocs.sendinblue.com).
+ * To explore more, you should visit the [SendinBlue API documentation](https://apidocs.sendinblue.com).
 
 ## Available functions
 
@@ -102,7 +102,7 @@ List of API calls that you can make. Please do note that the order of parameters
  * update_webhook($id,$url,$description,$events) - Editing a webhook
  * delete_bounces($start_date,$end_date,$email) - Deleting bounces
  * send_email($to,$subject,$from,$html,$text,$cc,$bcc,$replyto,$attachment,$headers) - Sending out a transactional email
- * send_transactional_template($id,$to,$cc,$bcc,$attr,$attachmentUrl,$attachment) - Send templates created on Sendinblue, through Sendinblue smtp.
+ * send_transactional_template($id,$to,$cc,$bcc,$attr,$attachmentUrl,$attachment) - Send templates created on SendinBlue, through SendinBlue smtp.
  * create_template($from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status,$attach) - Create a template 
  * update_template($id,$from_name,$name,$bat_sent,$html_content,$html_url,$subject,$from_email,$reply_to,$to_field,$status,$attach) - Update template information
 
