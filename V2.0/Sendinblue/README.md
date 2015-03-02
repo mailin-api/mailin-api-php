@@ -11,7 +11,7 @@ This is the Sendinblue Php library. It implements the various exposed APIs that 
 
 ```PHP
 <?php
-require('mailin.php');
+use Sendinblue\Mailin
 /*
  * This will initiate the API with the endpoint and your access key.
  *

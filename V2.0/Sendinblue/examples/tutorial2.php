@@ -1,6 +1,6 @@
 <?php
 
-require('../mailin.php');
+use Sendinblue\Mailin;
 /*
  * This will initiate the API with the endpoint and your access key.
  *

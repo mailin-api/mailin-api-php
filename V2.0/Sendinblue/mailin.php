@@ -1,6 +1,6 @@
 <?php
 
-namespace SendinBlue;
+namespace Sendinblue;
 
 /**
  * Mailin REST client
