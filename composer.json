@@ -6,7 +6,7 @@
         "php": ">=5.3"
     },
     "autoload": {
-        "psr-0": { "Sendinblue": "V2.0/" }
+        "psr-0": { "Sendinblue": "src/" }
     },
     "homepage": "https://github.com/mailin-api/mailin-api-php",
     "authors": [ 
