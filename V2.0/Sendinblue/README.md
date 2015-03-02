@@ -9,11 +9,11 @@ This is the SendinBlue Php library. It implements the various exposed APIs that 
 
  * You can install the SendinBlue API using [Composer](https://packagist.org/packages/mailin-api/mailin-api-php). Just add the following to your composer.json:
 
-    {
+    ```{
         "require": {
             "mailin-api/mailin-api-php": "dev-master"
         }
-    }
+    }```
 
    You will then need to:
  * Run ``composer install`` to get these dependencies added to your vendor directory
