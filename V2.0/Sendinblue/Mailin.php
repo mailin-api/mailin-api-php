@@ -1,7 +1,7 @@
 <?php
 
 namespace Sendinblue;
-
+use Exception;
 /**
  * Mailin REST client
  */ 
