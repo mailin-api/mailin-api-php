@@ -51,7 +51,7 @@ List of API calls that you can make, you can click to read more about it. Please
  * create_update_user($email,$attributes,$blacklisted,$listid,$listid_unlink,$blacklisted_sms) - Create/Update a user information
  * delete_user($email) - Deleting user from db is not permitted but this action will unlink him from all lists
  * import_users($url,$listids,$notify_url,$name) - Import users/emails
- * export_users($export_attrib,$filter,$notify_url) - Export users/emails
+ * export_users($export_attrib,$filter,$notify_url,$list_parent) - Export users/emails
  * get_processes() - Get information about all background processes
  * get_process($id) - Get information about a specific process
  * get_senders($option) - Get information about all/specific senders
