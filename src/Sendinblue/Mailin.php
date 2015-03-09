@@ -238,9 +238,9 @@ class Mailin
         {
                 return $this->put("user/".$email,json_encode(array("attributes"=>$attributes,"blacklisted"=>$blacklisted,"listid"=>$listid,"listid_unlink"=>$listid_unlink)));
         }
-        public function import_users($url,$listids,$notify_url,$name,$list_parent)
+        public function import_users($url,$listids,$notify_url,$name,$folder_id)
         {
-                return $this->post("user/import",json_encode(array("url"=>$url,"listids"=>$listids,"notify_url"=>$notify_url,"name"=>$name,"list_parent"=>$list_parent)));
+                return $this->post("user/import",json_encode(array("url"=>$url,"listids"=>$listids,"notify_url"=>$notify_url,"name"=>$name,"list_parent"=>$folder_id)));
         }
         public function export_users($export_attrib,$filter,$notify_url)
         {
