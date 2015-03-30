@@ -77,13 +77,13 @@ class Mailin
         {
                 return $this->get("account/smtpdetail","");
         }
-        public function create_child_account($email,$password,$company_org,$first_name,$last_name,$credits)
+        public function create_child_account($email,$password,$company_org,$first_name,$last_name,$credits,$associate_ip)
         {
-                return $this->post("account",json_encode(array("child_email"=>$email,"password"=>$password,"company_org"=>$company_org,"first_name"=>$first_name,"last_name"=>$last_name,"credits"=>$credits)));
+                return $this->post("account",json_encode(array("child_email"=>$email,"password"=>$password,"company_org"=>$company_org,"first_name"=>$first_name,"last_name"=>$last_name,"credits"=>$credits,"associate_ip"=>$associate_ip)));
         }
-        public function update_child_account($child_authkey,$company_org,$first_name,$last_name,$password)
+        public function update_child_account($child_authkey,$company_org,$first_name,$last_name,$password,$associate_ip,$disassociate_ip)
         {
-                return $this->put("account",json_encode(array("auth_key"=>$child_authkey,"company_org"=>$company_org,"first_name"=>$first_name,"last_name"=>$last_name,"password"=>$password)));
+                return $this->put("account",json_encode(array("auth_key"=>$child_authkey,"company_org"=>$company_org,"first_name"=>$first_name,"last_name"=>$last_name,"password"=>$password,"associate_ip"=>$associate_ip,"disassociate_ip"=>$disassociate_ip)));
         }
         public function delete_child_account($child_authkey)
         {

@@ -13,8 +13,8 @@ List of API calls that you can make, you can click to read more about it. Please
 
  * get_account() - Get your account information
  * get_smtp_details() - Get your SMTP account information
- * create_child_account($email,$password,$company_org,$first_name,$last_name,$credits) - Create a Reseller child account
- * update_child_account($child_authkey,$company_org,$first_name,$last_name,$password) - Update a Reseller child account
+ * create_child_account($email,$password,$company_org,$first_name,$last_name,$credits,$associate_ip) - Create a Reseller child account
+ * update_child_account($child_authkey,$company_org,$first_name,$last_name,$password,$associate_ip,$disassociate_ip) - Update a Reseller child account
  * delete_child_account($child_authkey) - Delete a Reseller child account
  * get_child_account($child_authkey) - Get Reseller child accounts
  * add_remove_child_credits($childauthkey,$add_credits,$remove_credits) - Add/Remove Reseller child credits
