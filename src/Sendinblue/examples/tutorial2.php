@@ -6,10 +6,19 @@ use Sendinblue\Mailin;
  *
  */
 $mailin = new Mailin('https://api.sendinblue.com/v2.0','Your access key');
+
 /*
  * This will get all your campaigns
  *
  */
-var_dump($mailin->get_campaigns_v2());
+/** Prepare variables for easy use **/ 
+
+$data = array( "type"=>"classic",
+			"status"=>"queued",
+			"page"=>1,
+			"page_limit"=>10
+			);
+
+var_dump($mailin->get_campaigns_v2($data));
 
 ?>
