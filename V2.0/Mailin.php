@@ -732,6 +732,8 @@ class Mailin
     */
     public function update_sender($data)
     {
+        $id = $data['id'];
+        unset($data['id']);
         return $this->put("advanced/".$id,json_encode($data));
     }
 
