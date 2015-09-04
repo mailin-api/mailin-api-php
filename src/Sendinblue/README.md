@@ -21,9 +21,11 @@ This is the SendinBlue Php library. It implements the various exposed APIs that 
 
 OR
  * Simply install by running below command
+
     ```
     composer require mailin-api/mailin-api-php:dev-master
     ```
+    
 You can use below sample script to get started.
 
 ```PHP
