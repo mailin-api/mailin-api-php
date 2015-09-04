@@ -19,6 +19,11 @@ This is the SendinBlue Php library. It implements the various exposed APIs that 
  * Run ``composer install`` to get these dependencies added to your vendor directory
  * Add the autoloader to your application with this line: ``require("vendor/autoload.php")``
 
+OR
+ * Simply install by running below command
+    ```
+    composer require mailin-api/mailin-api-php:dev-master
+    ```
 You can use below sample script to get started.
 
 ```PHP
