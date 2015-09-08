@@ -8,8 +8,11 @@
     "autoload": {
         "psr-0": { "Sendinblue": "src/" }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
     "homepage": "https://github.com/mailin-api/mailin-api-php",
     "authors": [ 
         {

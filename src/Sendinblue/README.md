@@ -11,7 +11,7 @@ This is the SendinBlue Php library. It implements the various exposed APIs that 
 
     ```{
         "require": {
-            "mailin-api/mailin-api-php": "dev-master"
+            "mailin-api/mailin-api-php": "1.0.*"
         }
     }```
 
@@ -23,7 +23,7 @@ OR
  * Simply install by running below command
 
     ```
-    composer require mailin-api/mailin-api-php:dev-master
+    composer require mailin-api/mailin-api-php
     ```
     
 You can use below sample script to get started.
