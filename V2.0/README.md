@@ -126,7 +126,7 @@ List of API calls that you can make, you can click to read more about it. Please
 
 ####Recommendation:
 
-If you face any error like "Curl error: SSL certificate problem, verify that the CA cert is OK. Details: error:14090086:SSL routines:func(144):reason(134)\n", with our library then by adding the below line of code just before curl_exec() ( line no. 37 ) in mailin.php file, you may no longer face this issue.
+If you face any error like "Curl error: SSL certificate problem, verify that the CA cert is OK. Details: error:14090086:SSL routines:func(144):reason(134)\n", with our library then by adding the below line of code just before curl_exec() ( line no. 40 ) in mailin.php file, you may no longer face this issue.
 ```PHP
 curl_setopt($ch, CURLOPT_CAINFO, "PATH_TO/cacert.pem");
 ```
