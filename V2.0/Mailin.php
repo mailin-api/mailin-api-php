@@ -41,8 +41,8 @@ class Mailin
         $data = curl_exec($ch);
         if(curl_errno($ch))
         {
-            $this->last_error = $ch;
-            echo 'Curl error: ' . curl_error($this->last_error) . '\n';
+            $this->last_error = curl_error($ch);
+            echo 'Curl error: ' . $this->last_error . '\n';
         }
         curl_close($ch);
         return json_decode($data,true);
