@@ -553,7 +553,7 @@ class Mailin
         @param {Array} data contains php array with key value pair.
         @options data {Integer} type: Type of attribute to be deleted [Mandatory]
     */
-    public function delete_attribute($type,$data)
+    public function delete_attribute($data)
     {
         $type = $data['type'];
         unset($data['type']);
