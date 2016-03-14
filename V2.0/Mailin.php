@@ -9,6 +9,7 @@ class Mailin
     public $api_key;
     public $base_url;
     public $curl_opts = array();
+    public $last_error;
     public function __construct($base_url,$api_key)
     {
         if(!function_exists('curl_init')) 
@@ -40,7 +41,8 @@ class Mailin
         $data = curl_exec($ch);
         if(curl_errno($ch))
         {
-            echo 'Curl error: ' . curl_error($ch). '\n';
+            $this->last_error = curl_error($ch);
+            echo 'Curl error: ' . $this->last_error . '\n';
         }
         curl_close($ch);
         return json_decode($data,true);
