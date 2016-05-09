@@ -14,7 +14,7 @@ class Mailin
     {
         if(!function_exists('curl_init')) 
         {
-            throw new RuntimeException('Mailin requires CURL module');
+            throw new RuntimeException('Mailin requires cURL module');
         }
         $this->base_url = $base_url;
         $this->api_key = $api_key;
@@ -47,7 +47,7 @@ class Mailin
         $data = curl_exec($ch);
         if(curl_errno($ch))
         {
-            throw new RuntimeException('Curl error: ' . curl_error($ch));
+            throw new RuntimeException('cURL error: ' . curl_error($ch));
         }
         curl_close($ch);
         return json_decode($data,true);
