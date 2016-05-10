@@ -7,6 +7,8 @@ This is the SendinBlue Php library. It implements the various exposed APIs that 
 
  * You will need to first get the Access key from [SendinBlue](https://www.sendinblue.com).
 
+ * Our library supports a timeout value, default is 30,000 MS ( 30 secs ), which you can pass as 3rd parameter in Mailin class Object.
+
  * Assuming that you have cloned this git repo, or downloaded Mailin.php and its in the same directory than the script. You can use this small sample script to get started.
 
 ```PHP
@@ -16,7 +18,7 @@ require('Mailin.php');
  * This will initiate the API with the endpoint and your access key.
  *
  */
-$mailin = new Mailin('https://api.sendinblue.com/v2.0','Your access key');  
+$mailin = new Mailin('https://api.sendinblue.com/v2.0','Your access key', 5000);	// Optional parameter: Timeout in MS
 
 /** Prepare variables for easy use **/ 
 
