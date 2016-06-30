@@ -49,6 +49,9 @@ class Mailin
         {
             throw new RuntimeException('cURL error: ' . curl_error($ch));
         }
+        if(!is_string($data) || !strlen($data)) {
+            throw new RuntimeException('Request Failed');
+        }
         curl_close($ch);
         return json_decode($data,true);
     }
