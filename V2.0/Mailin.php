@@ -38,7 +38,6 @@ class Mailin
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         }
         curl_setopt($ch, CURLOPT_HTTPHEADER, array($auth_header,$content_header));
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_TIMEOUT_MS, $timeout);
