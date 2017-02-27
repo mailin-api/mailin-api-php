@@ -7,6 +7,8 @@ This is the SendinBlue Php library. It implements the various exposed APIs that 
 
  * You will need to first get the Access key from [SendinBlue](https://www.sendinblue.com).
 
+ * Our library supports a timeout value, default is 30,000 MS ( 30 secs ), which you can pass as 3rd parameter in Mailin class Object.
+
  * You can install the SendinBlue API using [Composer](https://packagist.org/packages/mailin-api/mailin-api-php). Just add the following to your composer.json:
 
     ```{
@@ -35,7 +37,7 @@ use Sendinblue\Mailin
  * This will initiate the API with the endpoint and your access key.
  *
  */
-$mailin = new Mailin('https://api.sendinblue.com/v2.0','Your access key');  
+$mailin = new Mailin('https://api.sendinblue.com/v2.0','Your access key', 5000);	// Optional parameter: Timeout in MS  
 
 /** Prepare variables for easy use **/ 
 
@@ -145,7 +147,7 @@ List of API calls that you can make, you can click to read more about it. Please
 
 ####Recommendation:
 
-If you face any error like "Curl error: SSL certificate problem, verify that the CA cert is OK. Details: error:14090086:SSL routines:func(144):reason(134)\n", with our library then by adding the below line of code just before curl_exec() ( line no. 37 ) in mailin.php file, you may no longer face this issue.
+If you face any error like "Curl error: SSL certificate problem, verify that the CA cert is OK. Details: error:14090086:SSL routines:func(144):reason(134)\n", with our library then by adding the below line of code just before curl_exec() ( line no. 48 ) in mailin.php file, you may no longer face this issue.
 ```PHP
 curl_setopt($ch, CURLOPT_CAINFO, "PATH_TO/cacert.pem");
 ```
