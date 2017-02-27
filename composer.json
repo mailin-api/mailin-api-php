@@ -3,7 +3,8 @@
     "description": "Official SendinBlue provided API V2 wrapper",
     "license": "MIT",
     "require": {
-        "php": ">=5.3"
+        "php": ">=5.3",
+        "ext-curl": "*"
     },
     "autoload": {
         "psr-0": { "Sendinblue": "src/" }
