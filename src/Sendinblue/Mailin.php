@@ -2,8 +2,6 @@
 
 namespace Sendinblue;
 
-use Exception;
-
 /**
  * SendinBlue REST client
  */
@@ -16,7 +14,7 @@ class Mailin
     public function __construct($base_url, $api_key, $timeout='')
     {
         if (!function_exists('curl_init')) {
-            throw new Exception('Mailin requires CURL module');
+            throw new \Exception('Mailin requires CURL module');
         }
         $this->base_url = $base_url;
         $this->api_key = $api_key;
@@ -33,7 +31,7 @@ class Mailin
         $content_header = "Content-Type:application/json";
         $timeout = ($this->timeout!='')?($this->timeout):30000; //default timeout: 30 secs
         if ($timeout!='' && ($timeout <= 0 || $timeout > 60000)) {
-            throw new Exception('value not allowed for timeout');
+            throw new \Exception('value not allowed for timeout');
         }
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             // Windows only over-ride
