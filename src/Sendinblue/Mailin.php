@@ -48,10 +48,10 @@ class Mailin
         curl_setopt($ch, CURLOPT_POSTFIELDS, $input);
         $data = curl_exec($ch);
         if (curl_errno($ch)) {
-            throw new RuntimeException('cURL error: ' . curl_error($ch));
+            throw new \RuntimeException('cURL error: ' . curl_error($ch));
         }
         if (!is_string($data) || !strlen($data)) {
-            throw new RuntimeException('Request Failed');
+            throw new \RuntimeException('Request Failed');
         }
         curl_close($ch);
         return json_decode($data, true);
