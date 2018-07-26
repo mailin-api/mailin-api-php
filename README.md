@@ -1,6 +1,6 @@
 # SendinBlue Php Library
 
-**Note:** The latest **API V3.0** ( LTS ) is now maintained at <code>https://github.com/sendinblue/</code> and the Documentation is available here <code>https://developers.sendinblue.com</code>
+> **Note:** The latest **API V3.0** ( LTS ) is now maintained at <code>https://github.com/sendinblue/</code> and the Documentation is available here <code>https://developers.sendinblue.com</code>
 
 This is the SendinBlue Php library. It implements the various exposed APIs that you can read more about on https://apidocs.sendinblue.com.
 
