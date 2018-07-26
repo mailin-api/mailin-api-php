@@ -1,5 +1,7 @@
 # SendinBlue Php Library
 
+**Note:** The latest **API V3.0** ( LTS ) is now maintained at <code>https://github.com/sendinblue/</code> and the Documentation is available here <code>https://developers.sendinblue.com</code>
+
 This is the SendinBlue Php library. It implements the various exposed APIs that you can read more about on https://apidocs.sendinblue.com.
 
 SendinBlue API's use HTTP Authentication through an api key. You can create your api key from [API Console](https://my.sendinblue.com/advanced/apikey), after you sign up for an account with SendinBlue. You must use latest version 2.0, access key, for accessing APIs.
